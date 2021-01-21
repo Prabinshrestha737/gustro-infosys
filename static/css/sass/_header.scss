@@ -1,0 +1,351 @@
+.header{
+    position: absolute;
+    top: 20px;
+    z-index: 9999;
+    width: 100%;
+    &_bg{
+        background: #efefef;
+    }
+    &_logo{
+        height: 30px;
+        width: auto;
+    }
+    &_links_list{
+        margin: 5px;
+    }
+    &_links_list{
+        & ul{
+            border-radius: 0px;
+            background: #ffffff;
+            border: none;
+        }
+        & a{
+            font-weight: 700;
+            font-size: 14px;
+            color:#1a5a98 !important;
+            position: relative;
+            transition: 0.2s ease-in-out;
+            padding: 10px;
+            &:hover{
+                color: #b6d27c !important;
+                // color: black;
+                // -webkit-text-fill-color: white; /* Will override color (regardless of order) */
+                // -webkit-text-stroke-width: 0.9px;
+                // -webkit-text-stroke-color: black;
+            }
+            &:hover:after{
+                animation: header_after_border 0.7s linear ;
+                display: block;
+            }
+            
+        }
+    }
+     
+    &_links &_link:after{
+        content:'';
+        background: #b6d27c;
+        height: 2px;
+        width: 100%;
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        margin: 2px;
+        border-radius: 2px;
+        display: none;
+    }
+    &_drop{
+        &_link:before{
+            content:'';
+            background: #b6d27c;
+            height: 2px;
+            width: 100%;
+            position: absolute;
+            bottom: 0px;
+            left: 0px;
+            margin: 2px;
+            border-radius: 2px;
+            display: none;
+        }
+        &_link:hover:before{
+            animation: header_after_border 0.7s linear ;
+            display: block;
+        }
+        &_link:after{
+            content:none;
+        }
+    }
+
+    &_contact{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &_phone{
+            & span{
+                font-size: 13px;
+            }
+            & i{
+                color:#b6d27c;
+                padding-right: 10px;
+            }
+        }
+        &_email{
+            & span{
+                font-size: 13px;
+            }
+            & i{
+                color: #b6d27c;
+                padding-right: 10px;
+            }
+        }
+    }
+
+    &_social{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        & i{
+            padding: 5px 5px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+        & i.bi-facebook{
+            color:#1c66d5;
+        }
+        & i.bi-instagram{ 
+            background: linear-gradient( 
+                to right, #f32170, #ff6b08, 
+                 #cf23cf, #eedd44); 
+            -webkit-text-fill-color: transparent; 
+            -webkit-background-clip: text;
+        }
+        & i.bi-twitter{
+            color:#00adff;
+        }
+        & i.bi-google{
+            color:#ff6161;
+        }
+    }
+    
+}
+
+.gusto_animation{
+    display:flex;
+    justify-content: center;
+    
+    & span{
+        padding-top: 155px;
+        font-size: 365px;
+        color:#ffffff24;
+        font-weight: 600;
+    }
+}
+
+
+.home{
+    &_banner{
+        height: 700px;
+        background: #1a5a98;
+        // background-image: url('../image/Technology-HD-Backgrounds.jpg');
+        // background-position: center;
+        // background-repeat: no-repeat;
+        // background-size: cover;
+        overflow:hidden;
+        
+    }
+    &_aboutus{
+        
+    }
+}
+
+.aboutus{
+    display: flex;
+    padding: 50px 0px;
+    &_bg{
+    background: #efefef;
+    // background-color: white;
+    // background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 900'%3E%3Cpolygon fill='%23cc0000' points='957 450 539 900 1396 900'/%3E%3Cpolygon fill='%23aa0000' points='957 450 872.9 900 1396 900'/%3E%3Cpolygon fill='%23d6002b' points='-60 900 398 662 816 900'/%3E%3Cpolygon fill='%23b10022' points='337 900 398 662 816 900'/%3E%3Cpolygon fill='%23d9004b' points='1203 546 1552 900 876 900'/%3E%3Cpolygon fill='%23b2003d' points='1203 546 1552 900 1162 900'/%3E%3Cpolygon fill='%23d3006c' points='641 695 886 900 367 900'/%3E%3Cpolygon fill='%23ac0057' points='587 900 641 695 886 900'/%3E%3Cpolygon fill='%23c4008c' points='1710 900 1401 632 1096 900'/%3E%3Cpolygon fill='%239e0071' points='1710 900 1401 632 1365 900'/%3E%3Cpolygon fill='%23aa00aa' points='1210 900 971 687 725 900'/%3E%3Cpolygon fill='%23880088' points='943 900 1210 900 971 687'/%3E%3C/svg%3E");
+    // background-attachment: fixed;
+    // background-size: cover;
+    }
+    &_img{
+        
+    } 
+    & img{
+        height: auto;
+        width: 100%
+    }
+    &_devices img{
+        height: 200px;
+    }
+    &_info{
+        // width: 500px;
+        &_head{
+            padding-top: 0px;
+            @include respond(tab-port){
+                padding-bottom: 15px;
+            }
+            @include respond(phone){
+                padding-top: 15px;
+                padding-bottom: 15px;
+            }
+        }
+        &_para{
+            font-size: 17px;
+            @include respond(tab-port){
+                font-size: 15px;
+            }
+        }
+    }
+}
+
+.what{
+    max-width: max-content;
+    @include respond(tab-port){
+        display: flex;
+        flex-wrap: wrap;
+        padding-top: 15px;
+    }
+    &_box{
+        background-color: #1a5a98;
+        text-align: center;
+        text-transform: capitalize;
+        padding: 7px 15px;
+        font-size: 17px;
+        font-weight: 700;
+        color:white;
+        margin: 5px 0px;
+        @include respond(tab-port){
+            margin: 3px 3px;
+            font-size: 15px;
+        }
+    }
+}
+
+
+.do{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    // &::after {
+    //     content: '';
+    //     flex: auto;
+    // }
+    &_box{
+        border-radius: 10px;
+        width: 249px;
+        height: 300px;
+        // background-image: url('../image/web development.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: scroll;
+        position: relative;
+        margin: 5px;
+        margin-right: 5px;
+        cursor: pointer;
+        @include respond(big-desktop){
+            width: 269px;
+        }
+        @include respond(tab-land){
+            width: 224px;
+        }
+        @include respond(tab-port){
+            width: 222px;
+        }
+        @include respond(phone){
+            width: 162px;
+            height: 200px;
+        }
+        @include respond(small-phone){
+            width: 149px;
+            height: 200px;
+        }
+        &:hover{
+            animation: do-box 0.6s linear 0.1s;
+        }
+        &::before{
+            content: '';
+            height: 100%;
+            width: 100%;
+            background-color: #000000ab;
+            position: absolute;
+            top: 0px;
+            border-radius: 10px;
+
+        }
+        &_info{
+            padding-top: 20px;
+
+        }
+            
+        & p{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 20px;
+            font-weight: 700;
+            width: 100%;
+            text-align: center;
+            padding: 0px 15px;
+            color: white;
+            @include respond(small-phone){
+                font-size: 17px;
+            }
+        }
+        & span{
+            position: relative;
+            // top: 50%;
+            // left: 50%;
+            // transform: translate(-50%, -50%);
+            font-size: 15px;
+            font-weight: 400;
+            width: 100%;
+            text-align: center;
+            padding: 0px 15px;
+            color: white;
+        }
+    }
+
+}
+
+.plan{
+    border: none;
+    background: none;
+    color: #1a5a98;
+    background:#b6d27c;
+    padding: 5px 30px;
+    margin: 30px 0px;
+    font-weight: 600;
+    transition: 0.2s ease-in-out;
+    &:hover{
+        transform: scale(1.1);
+    }
+    &_head{
+        border: none;
+        background: none;
+        color: #1a5a98;
+        background:#b6d27c;
+        font-weight: 500;
+        transition: 0.2s ease-in-out;
+    }
+    &_service{
+        border: none;
+        background: none;
+        color: #1a5a98;
+        background:#b6d27c;
+        font-weight: 500;
+        font-size: 17px;
+        transition: 0.2s ease-in-out;
+        margin:  0px 10px;
+        &:hover{
+            background: white;
+        }
+    }
+}
+
+
+
+
+
+

@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'node_modules\bootstrap\dist\css\bootstrap.min.css'%}">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'node_modules\bootstrap-icons\font\bootstrap-icons.css'%}">
+    <link rel="stylesheet" href="{% static 'owlcarousel\dist\assets\owl.carousel.min.css'%}">
+    
+    <link rel="stylesheet" href="{% static 'owlcarousel\dist\assets\owl.theme.default.css'%}">
+    <link rel="stylesheet" href="{% static 'css\main.css'%}">
+    <!-- keep this only in contact us page -->
+    <link rel="stylesheet" href="{% static 'css\contact_us.css'%}">  
+    <title>Document</title>
+</head>
+<body >
+
+<div class="postion-relative ">
+  <section class="header">
+    <div class="container bg-white">
+      <div class="row py-2">
+        <div class="col-md-5  header_contact">
+          <div class="header_contact_phone">
+            <i class="bi bi-telephone-fill "></i>
+            <span>+977 - 0000000000</span>
+          </div>
+          <div class="header_contact_email">
+            <i class="bi bi-envelope-fill "></i>
+            <span>example@email.com</span>
+          </div>
+        </div>
+        <div class="col-md-7  header_social">
+          <i class="bi bi-facebook" onclick="location.href='#'"></i>
+          <i class="bi bi-instagram"onclick="location.href='#'"></i>
+          <i class="bi bi-twitter"onclick="location.href='#'"></i>
+          <i class="bi bi-google"onclick="location.href='#'"></i>
+          <button  class="text-uppercase button_1" onclick="location.href('#')">CMS login</button>
+        </div>
+      </div>
+    </div>
+  
+  
+    <section class="">
+      <div class="container header_bg">
+        <div class="row">
+          <div class="col-md-12">
+            <nav class="navbar navbar-expand-lg navbar-light ">
+              <div class="container-fluid">
+                <img class="header_logo" src="image\gustologo.jpg" alt="">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+                  <ul class="navbar-nav mb-2 mb-lg-0 header_links">
+                    <li class="nav-item header_links_list">
+                      <a class="nav-link  text-uppercase header_link" aria-current="page" href="{% url 'home'%}">Home</a>
+                    </li>
+                    <li class="nav-item header_links_list">
+                      <a class="nav-link  text-uppercase header_link" aria-current="page" href="{% url 'aboutus'%}">About Us</a>
+                    </li>
+                    <li class="nav-item dropdown header_links_list header_drop">
+                      <a class="nav-link dropdown-toggle text-uppercase header_drop_link" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Services
+                      </a>
+                      <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item text-capitalize" href="#">Web Development</a></li>
+                        <li><a class="dropdown-item text-capitalize" href="#">Software Development</a></li>
+                        <li><a class="dropdown-item text-capitalize" href="#">Digital marketing</a></li>
+                        <li><a class="dropdown-item text-capitalize" href="#">graphic design</a></li>
+                        <li><a class="dropdown-item text-capitalize" href="#">animation</a></li>
+                        <li><a class="dropdown-item text-capitalize" href="#">CCTV installation</a></li>
+                        <li><a class="dropdown-item text-capitalize" href="#">PVEX installation</a></li>
+                      </ul>
+                    </li>
+                    <li class="nav-item header_links_list">
+                      <a class="nav-link text-uppercase header_link" aria-current="page" href="{% url 'blog'%}">blogs</a>
+                    </li>
+                    <li class="nav-item header_links_list">
+                      <a class="nav-link text-uppercase header_link " aria-current="page" href="{% url 'portfolio'%}">portfolio</a>
+                    </li>
+                    <li class="nav-item header_links_list">
+                      <a class="nav-link text-uppercase header_link" aria-current="page" href="{% url 'career'%}">Career</a>
+                    </li>
+                    <li class="nav-item header_links_list">
+                      <a class="nav-link text-uppercase header_link" aria-current="page" href="{% url 'contact'%}">contact us</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </section>
+  </section>
+</div>
+
+
+<section class="aboutus_bg">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="aboutus">
+          <div class="row" style="width: 100%"> <!--dont remove width: 100%-->
+            <div class="col-xl-3 col-lg-5 col-md-12 order-lg-0 order-2">
+              <div class="what">
+                <div class="about_portfolio">
+                  <p  class="text-capitalize text-center">Services we provide</p>
+                </div>
+                <div class="what_box">
+                  <p>web development</p>
+                </div>
+                <div class="what_box">
+                  <p>software development</p>
+                </div>
+                <div class="what_box">
+                  <p>digital marketing</p>
+                </div>
+                <div class="what_box">
+                  <p>graphic design</p>
+                </div>
+                <div class="what_box">
+                  <p>animation</p>
+                </div>
+                <div class="what_box">
+                  <p>CCTV installation</p>
+                </div>
+                <div class="what_box">
+                  <p>PVEX installation</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-5  col-lg-6 col-md-6">
+              <div class="aboutus_info">
+                <p class="text-uppercase heading_1 aboutus_info_head">contact us</p>
+                <div class="contact_us">
+                  <i class="bi bi-house-door-fill"></i>
+                  <span>Sallaghari, Bhaktapur, Nepal</span>
+                </div>
+                <div class="contact_us">
+                  <i class="bi bi-telephone"></i>
+                  <span>+977 - 9800000000 / 01-2222222</span>
+                </div>
+                <div class="contact_us">
+                  <i class="bi bi-envelope"></i>
+                  <span>example@email.com</span>
+                </div>
+                <button class="text-capitalize plan_service m-0 my-3">choose Our Plan</button>
+              </div>
+            </div>
+            <div class="col-xl-4 col-lg-12 col-md-6 order-lg-3 order-sm-1 order-1">
+              <div class="aboutus_img">
+                <div id="map"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="query">
+          <p>Have any query on IT services, Leave message Here:</p>
+          <form method = "POST">
+            {% csrf_token %}
+            <div class="mb-3">
+              <input type="text" name="name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Name">
+              <div id="emailHelp" class="form-text">We'll never share your name with anyone else.</div>
+            </div>
+            <div class="mb-3">
+              <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
+              <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+            </div>
+            <div class="mb-3">
+              <input type="text" name="subject" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="subject">
+            </div>
+            <div class="mb-3">
+              <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
+              <textarea class="form-control" name= "textarea" id="exampleFormControlTextarea1" rows="3"></textarea>
+            </div>
+            <button type="submit" class="btn button_1">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="partners_header">
+          <p class="text-center heading_1">our clinets</p>
+        </div>
+        <div class="partners_slide">
+          <div class="owl-carousel owl-theme">
+            <img class="item" src="{% static 'image\1.webp'%}" alt="">
+            <img class="item" src="{% static 'image\2.webp'%}" alt="">
+            <img class="item" src="{% static 'image\6.webp'%}" alt="">
+            <img class="item" src="{% static 'image\3.webp'%}" alt="">
+            <img class="item" src="{% static 'image\4.webp'%}" alt="">
+            <img class="item" src="{% static 'image\5.webp'%}" alt="">
+            <img class="item" src="{% static 'image\7.webp'%}" alt="">
+            <img class="item" src="{% static 'image\8.webp'%}" alt="">
+            <img class="item" src="{% static 'image\9.webp'%}" alt="">
+            <img class="item" src="{% static 'image\10.webp'%}" alt="">
+            <img class="item" src="{% static 'image\7.webp'%}" alt="">
+            <img class="item" src="{% static 'image\8.webp'%}" alt="">
+            <img class="item" src="{% static 'image\9.webp'%}" alt="">
+            <img class="item" src="{% static 'image\10.webp'%}" alt="">
+          </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="footer-gray">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <footer>
+          <div class="footer-gray">
+            <div class="footer-custom">
+              <div class="footer-lists">
+                <div class="footer-list-wrap">
+                  <h6 class="ftr-hdr">Phone Number</h6>
+                  <ul class="ftr-links-sub">
+                    <li>800-952-5592</li>
+                  </ul>
+                  <h6 class="ftr-hdr">Email</h6>
+                  <ul class="ftr-links-sub">
+                    <li><a  rel="nofollow">example@gmail.com</a></li>
+                  </ul>
+                </div>
+                <!--/.footer-list-wrap-->
+                <div class="footer-list-wrap">
+                  <h6 class="ftr-hdr text-capitalize">Customer Service</h6>
+                  <ul class="ftr-links-sub">
+                    <li><a class="text-capitalize" href="#" rel="nofollow">web developmet</a></li>
+                    <li><a class="text-capitalize" href="#" rel="nofollow">web developmet</a></li>
+                    <li><a class="text-capitalize" href="#" rel="nofollow">web developmet</a></li>
+                    <li><a class="text-capitalize" href="#" rel="nofollow">web developmet</a></li>
+                    <li><a class="text-capitalize" href="#" rel="nofollow">web developmet</a></li>
+                    <li><a class="text-capitalize" href="#" rel="nofollow">web developmet</a></li>
+                  </ul>
+                </div>
+                <div class="footer-list-wrap">
+                  <h6 class="ftr-hdr">About Gusto Infosys</h6>
+                  <ul class="ftr-links-sub">
+                    <li><a href="#" rel="nofollow">About us</a></li>
+                    <li><a href="#" rel="nofollow">Careers</a></li>
+                    <li><a href="#" rel="nofollow">our Plan</a></li>
+                    <li><a href="#" rel="nofollow">Blogs </a></li>
+                  </ul>
+                </div>
+              </div>
+              <!--/.footer-lists-->
+              <div class="footer-email">
+                <h6 class="ftr-hdr">Subscribe</h6>
+                <div id="ftr-email" class="ftr-email-form">
+                  <form id="ftrEmailForm" method="post" action="">
+                    <div class="error">Please enter a valid email address</div>
+                    <input type="text" name="email_address_" id="ftrEmailInput" class="input" placeholder="Enter email address" />
+                    <input type="submit" class="button" value="SUBMIT" />
+                  </form>
+                </div>
+                <!--/.ftr-email-form-->
+                <div class="ftr-email-privacy-policy"></div>
+              </div>
+              <!--/.footer-email-->
+              <div class="footer-social ">
+                <h6 class="ftr-hdr">Follow Us</h6>
+                <div class="  header_social">
+                  <i class="bi bi-facebook" onclick="location.href='#'"></i>
+                  <i class="bi bi-instagram"onclick="location.href='#'"></i>
+                  <i class="bi bi-twitter"onclick="location.href='#'"></i>
+                  <i class="bi bi-google"onclick="location.href='#'"></i>
+                  <button  class="text-uppercase button_1" onclick="location.href='#'">CMS login</button>
+                </div>
+              </div>
+              <!--/.footer-social-->
+              <div class="footer-legal">
+                <p>&copy; gustoinfosys.com Inc. All Rights Reserved. | 
+                </p>
+              </div>
+            </div>
+            <!--/.footer-custom-->
+          </div>
+          <!--/.footer-gray-->
+        </footer>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+<script src="{% static 'node_modules\jquery\dist\jquery.min.js'%}"></script>
+<script src="{% static 'node_modules\bootstrap\dist\js\bootstrap.min.js'%}"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap&libraries=&v=weekly" defer></script>
+<script src="{% static 'owlcarousel\dist\owl.carousel.js'%}"></script>
+<script src="{% static 'particles.js\particles.js'%}"></script>
+<script>
+  $('.owl-carousel').owlCarousel({
+    loop:true,
+    margin:10,
+    nav:true,
+    dots: false,
+    autoplay: true,
+    responsive:{
+        0:{
+            items:3
+        },
+        767:{
+            items:4
+        },
+        992:{
+            items:5
+        },
+        1000:{
+            items:8
+        },
+        1200:{
+            items:9
+        }
+        
+    }
+});
+$('.nav-prev').html('<i class="bi bi-chevron-left"></i>');
+$('.nav-nest').html('<i class="bi bi-chevron-right"></i>');
+</script>
+<script>
+  // Initialize and add the map
+  function initMap() {
+    // The location of Uluru
+    const uluru = { lat: -25.344, lng: 131.036 };
+    // The map, centered at Uluru
+    const map = new google.maps.Map(document.getElementById("map"), {
+      zoom: 4,
+      center: uluru,
+    });
+    // The marker, positioned at Uluru
+    const marker = new google.maps.Marker({
+      position: uluru,
+      map: map,
+    });
+  }
+</script>
+</body>
+</html>

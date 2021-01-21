@@ -1,0 +1,380 @@
+
+.aboutus{
+   
+    display: flex;
+    padding: 50px 0px;
+    &_bg{
+        padding-top: 200px;
+        background: none !important;
+        padding-top: 200px;
+        position: relative;
+        &::before{
+            content: '';
+            background:#1a5a98;
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            top: 0px;
+            z-index: -1;
+            // clip-path: polygon(0 0, 100% 0, 100% 87%, 30% 100%, 0 46%);
+            // @include respond(phone){
+            //     clip-path: polygon(0 0, 100% 0, 100% 87%, 30% 100%, 0 86%);
+            // }
+        }
+    }
+    &_img{
+        
+    } 
+    & img{
+        height: auto;
+        width: 100%
+    }
+    &_devices img{
+        height: 200px;
+    }
+    &_info{
+        // width: 500px;
+        &_head{
+            padding-top: 0px;
+            color: #b6d27c;
+            @include respond(tab-port){
+                padding-bottom: 15px;
+            }
+            @include respond(phone){
+                padding-top: 15px;
+                padding-bottom: 15px;
+            }
+        }
+        &_para{
+            font-size: 17px;
+            color: white;
+            @include respond(tab-port){
+                font-size: 15px;
+            }
+        }
+    }
+}
+
+.what{
+    max-width: max-content;
+    @include respond(tab-port){
+        display: flex;
+        flex-wrap: wrap;
+        padding-top: 15px;
+    }
+    &_box{
+        background-color: #b6d27c;
+        text-align: center;
+        text-transform: capitalize;
+        padding: 7px 15px;
+        font-size: 17px;
+        font-weight: 700;
+        color:#1a5a98;
+        margin: 5px 0px;
+        @include respond(tab-port){
+            margin: 3px 3px;
+            font-size: 15px;
+        }
+        @include respond(small-phone){
+            margin: 3px 3px;
+            font-size: 11px;
+            padding: 5px;
+        }
+    }
+}
+
+
+.about_do{
+    &_box{
+        display: flex;
+        padding: 20px 0px ;
+        @include respond(phone){
+            flex-wrap: wrap;
+        }
+        &_img{
+            flex-shrink: 0;
+            border-radius: 10px;
+            width: 400px;
+            height: 400px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            // margin: 5px;
+            // margin-right: 5px;
+            cursor: pointer;
+            position: relative;
+            @include respond(tab-land){
+                width: 350px;
+                height: 400px;
+
+            }
+            @include respond(tab-port){
+                width: 250px;
+                height: 350px;
+
+            }
+            @include respond(phone){
+                width: 100%;
+                height: 270px;
+            }
+            &:hover{
+                animation: do-box 0.6s linear 0.1s;
+            }
+            &::before{
+                content: '';
+                height: 100%;
+                width: 100%;
+                background-color: #000000ab;
+                position: absolute;
+                top: 0px;
+                border-radius: 10px;
+            }
+        }
+        &_info{
+            padding-top: 20px;
+            z-index: 99999;
+            & p{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                font-size: 20px;
+                font-weight: 700;
+                width: 100%;
+                text-align: center;
+                padding: 0px 15px;
+                color: white;
+                @include respond(small-phone){
+                    font-size: 17px;
+                }
+            }
+
+        }
+            
+        
+        &_para{
+            // flex-shrink: 1;
+            // font-size: 15px;
+            font-weight: 400;
+            padding: 0px 20px;
+            color: black;
+            padding: 15px;
+            &_head{
+                font-size: 25px;
+                padding-bottom: 15px;
+                font-weight: 600;
+                color:#1a5a98;
+                @include respond(phone){
+                    font-size: 20px;
+                }
+            }
+            & span{
+                font-size: 17px;
+                @include respond(tab-port){
+                    font-size: 15px;
+                }
+            }
+
+        }
+    }
+
+}
+
+.about_portfolio{
+    font-weight: 700;
+    font-size: 14px;
+    color: #b6d27c;
+    background: none;
+    border:none;
+    border: 2px solid #b6d27c;
+    padding:0px 15px;
+    transition: 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+
+.service{
+    padding: 50px 0px;
+    
+    &_box{
+        cursor: pointer;
+        padding-bottom: 30px;
+    }
+    &_img{
+        height: 300px;
+        width: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        @include respond(tab-port){
+            height: 270px;
+        }
+        @include respond(phone){
+            height: 230px;
+        }
+        &:hover::after{
+            content: '';
+            background: #00000038;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 0;
+        }
+        
+        & i{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 200px;
+            opacity: 0.0;
+            z-index: 9999;
+            @include respond(tab-port){
+                font-size: 100px;
+            }
+        }
+        &:hover i{
+            opacity: 1;
+            animation: service_box 0.5s linear 0.1s ;
+            @include respond(tab-port){
+                animation: service_box2 0.5s linear 0.1s ;
+            }
+        }
+    }
+    &_info{
+        font-size: 20px;
+        background:#1a5a98;
+        text-align: center;
+        padding: 5px;
+        margin: 15px 0px;
+        color: white;
+    }
+}
+
+
+
+.out_cata{
+    background: #efefef;
+    padding: 15px 0px;
+    & p{
+        font-size: 17px;
+        font-weight: 600;
+        padding: 15px 15px;
+        // display: inline-block;
+        background: #b6d27c;
+        color:#1a5a98;
+    }
+    & ul{
+        margin: 0px;
+        padding: 0px;
+        padding-top: 15px;
+    } 
+    & ul li{
+        list-style-type: none;
+        // padding-top: 8px;
+        // width:max-content;
+
+    }
+    // & ul li i{
+    //     color: #1a5a98;
+    //     font-size: 20px;
+    //     padding-right: 15px;
+    // }
+    & ul li a{
+        text-decoration: none;
+        color:#1a5a98;
+        font-size: 17px;
+        font-weight: 500;;
+        display: block;
+        padding: 5px 15px;
+        &:hover{
+            color:white;
+            background:#1a5a98;
+        }
+    }
+}
+
+
+.news_sub{
+    background: #1a5a98;
+    padding: 15px;
+    margin: 20px 0px;
+    &_top{
+        font-size: 17px;
+        font-weight: 600;
+        padding: 15px 0px;
+    }
+    &_form input{
+        border: unset !important;
+        border-radius:0px!important;
+    }
+    &_form button{
+        border: unset !important;
+        border-radius:0px!important;
+        background: #b6d27c;
+        color: #1a5a98;
+        font-weight: 500;
+        &:hover{
+            background: white;
+            color: #1a5a98;
+        }
+    }
+
+}
+
+.services_info{
+    & img{
+        width: 100%;
+        height: auto;
+
+    }
+    &_para{
+        padding: 30px 0px;
+        font-size: 15px;
+    }
+}
+
+.contact_us{
+    & i {
+        padding-right: 15px;
+        font-size: 25px;
+        color:white;
+    }
+    & span {
+        color: white;
+        font-size: 16px;
+        font-weight: 400;
+    }
+}
+
+#map {
+    height: 300px;
+    width: 100%;
+    @include respond(tab-land){
+        margin: 30px 0px;
+    }
+    @include respond(phone){
+        height: 300px;
+        width: 100%;
+    }
+}
+
+.query{
+    padding: 30px 0px;
+    & p{
+        font-size: 30px;
+        font-weight: 700;
+        padding: 30px 0px;
+        color: #1a5a98;
+    }
+    & input{
+        border-radius: 0px;
+    }
+    & button{
+        margin-left: 0px;
+    }
+}
+
+

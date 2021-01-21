@@ -1,0 +1,159 @@
+.plan_bg{
+    background-color: #ee5522;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 200 200'%3E%3Cdefs%3E%3ClinearGradient id='a' gradientUnits='userSpaceOnUse' x1='100' y1='33' x2='100' y2='-3'%3E%3Cstop offset='0' stop-color='%23000' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%23000' stop-opacity='1'/%3E%3C/linearGradient%3E%3ClinearGradient id='b' gradientUnits='userSpaceOnUse' x1='100' y1='135' x2='100' y2='97'%3E%3Cstop offset='0' stop-color='%23000' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%23000' stop-opacity='1'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cg fill='%23ca481d' fill-opacity='0.6'%3E%3Crect x='100' width='100' height='100'/%3E%3Crect y='100' width='100' height='100'/%3E%3C/g%3E%3Cg fill-opacity='0.5'%3E%3Cpolygon fill='url(%23a)' points='100 30 0 0 200 0'/%3E%3Cpolygon fill='url(%23b)' points='100 100 0 130 0 100 200 100 200 130'/%3E%3C/g%3E%3C/svg%3E");  
+    width: 100%;
+    padding-top: 200px;
+    padding-bottom: 50px;
+}
+.plan_form_bg{
+    background-color: #efefef; 
+    width: 100%;
+    padding-top: 200px;
+    padding-bottom: 50px;
+}
+
+.plan_flex{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.plan_box{
+    width: 400px;
+    padding: 7px;
+    @include respond(big-desktop){
+        width: 380px;
+    }
+    @include respond(tab-land){
+        width: 320px;
+    }
+    @include respond(tab-port){
+        width: 240px;
+    }
+    @include respond(phone){
+        width: 100%;
+    }
+    &_head{
+        padding: 15px;
+        background: white;
+        @include respond(tab-land){
+            padding: 7px;
+        }
+
+    }
+    &_img{
+        height: 200px;
+        width: auto;
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin-top: 20px;
+        @include respond(tab-land){
+            height: 150px;
+            width: auto;
+        }
+    }
+    &_type{
+        color: black;
+        font-size: 30px;
+        font-weight: 700;
+        @include respond(tab-port){
+            font-size: 24px;
+        }
+    }
+    &_amount{
+        text-align: center;
+        padding-bottom: 15px;
+    }
+    &_price{
+        font-size: 20px;
+        font-weight: 700;
+    }
+    &_details{
+        
+        &_bg{
+            background: #ffc107;
+            padding: 15px;
+        }
+        & i{
+            font-size: 20px;
+            @include respond(tab-port){
+                font-size: 17px;
+            }
+            @include respond(phone){
+                font-size: 20px;
+            }  
+        }
+        & span{
+            padding-left: 7px;
+            @include respond(tab-port){
+                font-size: 15px;
+            }
+            @include respond(phone){
+                font-size: 17px;
+            }
+        }
+    }
+    &_middle{
+        transform: scale(1.05);
+        @include respond(phone){
+            transform: scale(1.0);
+        }
+
+    }
+    &_but{
+        text-align: center;
+        padding: 30px 0px 10px;
+        & button{
+            border: none;
+            background: #1a5a98;
+            color: white;
+            padding: 3px 10px;
+            font-weight: 600;
+            transition: 0.1s ease-in-out;
+            &:hover{
+                background:white;
+                color:#1a5a98;
+            }
+        }
+        
+    }
+
+}
+
+.plan_top_head{
+    font-size: 30px;
+    font-weight: 700;
+    text-transform: capitalize;
+    padding: 30px 0px;
+    padding-bottom: 70px;
+    color:white;
+    display: block;
+    width: 100%;
+    @include respond(phone){
+        font-size: 24px;
+    }
+    @include respond(small-phone){
+        font-size: 20px;
+        padding: 10px 0px;
+    }
+}
+
+.plan_form_head{
+    font-size: 30px;
+    font-weight: 700;
+    text-transform: capitalize;
+    padding: 30px 0px;
+    padding-bottom: 70px;
+    color:#1a5a98;
+    display: block;
+    width: 100%;
+    @include respond(phone){
+        font-size: 24px;
+    }
+    @include respond(small-phone){
+        font-size: 20px;
+        padding: 10px 0px;
+    }
+}

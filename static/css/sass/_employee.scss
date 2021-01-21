@@ -1,0 +1,104 @@
+.employee{
+    width: 500px;
+    display: flex;
+    padding: 30px;
+    flex-shrink: 0;
+    @include respond(tab-land){
+       width: 450px;
+       padding: 10px;
+    }
+    @include respond(tab-port){
+        width: 348px;
+        padding: 10px;
+        position: relative;
+        height: 322px;
+    }
+    @include respond(phone){
+        width: 248px;
+        overflow: hidden;
+        padding: 10px ;
+        margin-top: 30px;
+    }
+    @include respond(small-phone){
+        width: 100%;
+        overflow: hidden;
+        padding: 10px ;
+        height: 249px;;
+    }
+    &_box{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    &_image{
+        padding: 0px 20px;
+        @include respond(tab-port){
+            padding: 0px 10px;
+        }
+        & img{
+            height: 150px;
+            border-radius: 200px;
+            @include respond(phone){
+                height: 115px;
+            }
+        }
+    }
+    &_header{
+        font-size: 30px;
+    }
+    &_info{
+    }
+    &_name{
+        font-weight: 700;
+    }
+    &_postion{
+        font-size: 13px;
+        color:#b6d27c;
+    }
+    &_media{
+        & i{
+            padding: 5px 2px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        & i.bi-facebook{
+            color:#1c66d5;
+        }
+        & i.bi-instagram{ 
+            background: linear-gradient( 
+                to right, #f32170, #ff6b08, 
+                 #cf23cf, #eedd44); 
+            -webkit-text-fill-color: transparent; 
+            -webkit-background-clip: text;
+        }
+        & i.bi-twitter{
+            color:#00adff;
+        }
+        & i.bi-google{
+            color:#ff6161;
+        }
+    }
+
+    &_testimoney{
+        border-top: 1px solid #efefef;
+        border-bottom: 1px solid #efefef;
+        margin: 20px 0px;
+        @include respond(tab-port){
+            position: absolute;
+            top: 155px;
+            right: 0px;
+            margin: 20px;
+            border: none;
+            padding-bottom: 10px;
+        }
+        @include respond(phone){
+            top: 115px;
+        }
+        
+        & p{
+            font-size: 13px;
+            color: gray;
+            
+        }
+    }
+}

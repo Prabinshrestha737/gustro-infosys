@@ -1,0 +1,338 @@
+// .header{
+//     position: absolute;
+//     top: 20px;
+//     z-index: 9999;
+//     width: 100%;
+//     &_bg{
+//         background: #efefef;
+//     }
+//     &_logo{
+//         height: 30px;
+//         width: auto;
+//     }
+//     &_links_list{
+//         margin: 5px;
+//     }
+//     &_links_list{
+//         & ul{
+//             border-radius: 0px;
+//             background: #ffffff;
+//             border: none;
+//         }
+//         & a{
+//             font-weight: 700;
+//             font-size: 14px;
+//             color:#1a5a98 !important;
+//             position: relative;
+//             transition: 0.2s ease-in-out;
+//             padding: 10px;
+//             &:hover{
+//                 color: #b6d27c !important;
+//             }
+//             &:hover:after{
+//                 animation: header_after_border 0.7s linear ;
+//                 display: block;
+//             }
+            
+//         }
+//     }
+     
+//     &_links &_link:after{
+//         content:'';
+//         background: #b6d27c;
+//         height: 2px;
+//         width: 100%;
+//         position: absolute;
+//         bottom: 0px;
+//         left: 0px;
+//         margin: 2px;
+//         border-radius: 2px;
+//         display: none;
+//     }
+//     &_drop{
+//         &_link:before{
+//             content:'';
+//             background: #b6d27c;
+//             height: 2px;
+//             width: 100%;
+//             position: absolute;
+//             bottom: 0px;
+//             left: 0px;
+//             margin: 2px;
+//             border-radius: 2px;
+//             display: none;
+//         }
+//         &_link:hover:before{
+//             animation: header_after_border 0.7s linear ;
+//             display: block;
+//         }
+//         &_link:after{
+//             content:none;
+//         }
+//     }
+
+//     &_contact{
+//         display: flex;
+//         justify-content: space-between;
+//         align-items: center;
+//         &_phone{
+//             & span{
+//             }
+//             & i{
+//                 color:#b6d27c;
+//                 padding-right: 20px;
+//             }
+//         }
+//         &_email{
+//             & span{
+
+//             }
+//             & i{
+//                 color: #b6d27c;
+//                 padding-right: 20px;
+//             }
+//         }
+//     }
+
+//     &_social{
+//         display: flex;
+//         justify-content: flex-end;
+//         align-items: center;
+//         & i{
+//             padding: 5px 10px;
+//             font-size: 30px;
+//             cursor: pointer;
+//         }
+//         & i.bi-facebook{
+//             color:#1c66d5;
+//         }
+//         & i.bi-instagram{ 
+//             background: linear-gradient( 
+//                 to right, #f32170, #ff6b08, 
+//                  #cf23cf, #eedd44); 
+//             -webkit-text-fill-color: transparent; 
+//             -webkit-background-clip: text;
+//         }
+//         & i.bi-twitter{
+//             color:#00adff;
+//         }
+//         & i.bi-google{
+//             color:#ff6161;
+//         }
+//     }
+    
+// }
+
+// .gusto_animation{
+//     display:flex;
+//     justify-content: center;
+    
+//     & span{
+//         padding-top: 155px;
+//         font-size: 365px;
+//         color:#ffffff24;
+//         font-weight: 600;
+//     }
+// }
+
+
+// .home{
+//     &_banner{
+//         height: 700px;
+//         background: #1a5a98;
+//         overflow:hidden;
+        
+//     }
+//     &_aboutus{
+        
+//     }
+// }
+
+.aboutus{
+   
+    display: flex;
+    padding: 50px 0px;
+    &_bg{
+        padding-top: 200px;
+        background: none !important;
+        padding-top: 200px;
+        position: relative;
+        &::before{
+            content: '';
+            background:#1a5a98;
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            top: 0px;
+            z-index: -1;
+            // clip-path: polygon(0 0, 100% 0, 100% 87%, 30% 100%, 0 46%);
+            // @include respond(phone){
+            //     clip-path: polygon(0 0, 100% 0, 100% 87%, 30% 100%, 0 86%);
+            // }
+        }
+    }
+    &_img{
+        
+    } 
+    & img{
+        height: auto;
+        width: 100%
+    }
+    &_devices img{
+        height: 200px;
+    }
+    &_info{
+        // width: 500px;
+        &_head{
+            padding-top: 0px;
+            color: #b6d27c;
+            @include respond(tab-port){
+                padding-bottom: 15px;
+            }
+            @include respond(phone){
+                padding-top: 15px;
+                padding-bottom: 15px;
+            }
+        }
+        &_para{
+            font-size: 17px;
+            color: white;
+            @include respond(tab-port){
+                font-size: 15px;
+            }
+        }
+    }
+}
+
+.what{
+    max-width: max-content;
+    @include respond(tab-port){
+        display: flex;
+        flex-wrap: wrap;
+        padding-top: 15px;
+    }
+    &_box{
+        background-color: #b6d27c;
+        text-align: center;
+        text-transform: capitalize;
+        padding: 7px 15px;
+        font-size: 17px;
+        font-weight: 700;
+        color:#1a5a98;
+        margin: 5px 0px;
+        @include respond(tab-port){
+            margin: 3px 3px;
+            font-size: 15px;
+        }
+    }
+}
+
+
+.about_do{
+    &_box{
+        display: flex;
+        padding: 20px 0px ;
+        @include respond(phone){
+            flex-wrap: wrap;
+        }
+        &_img{
+            flex-shrink: 0;
+            border-radius: 10px;
+            width: 400px;
+            height: 400px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            // margin: 5px;
+            // margin-right: 5px;
+            cursor: pointer;
+            position: relative;
+            @include respond(tab-land){
+                width: 350px;
+                height: 400px;
+
+            }
+            @include respond(tab-port){
+                width: 250px;
+                height: 350px;
+
+            }
+            @include respond(phone){
+                width: 100%;
+                height: 270px;
+            }
+            &:hover{
+                animation: do-box 0.6s linear 0.1s;
+            }
+            &::before{
+                content: '';
+                height: 100%;
+                width: 100%;
+                background-color: #000000ab;
+                position: absolute;
+                top: 0px;
+                border-radius: 10px;
+            }
+        }
+        &_info{
+            padding-top: 20px;
+            z-index: 99999;
+            & p{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                font-size: 20px;
+                font-weight: 700;
+                width: 100%;
+                text-align: center;
+                padding: 0px 15px;
+                color: white;
+                @include respond(small-phone){
+                    font-size: 17px;
+                }
+            }
+
+        }
+            
+        
+        &_para{
+            // flex-shrink: 1;
+            // font-size: 15px;
+            font-weight: 400;
+            padding: 0px 20px;
+            color: black;
+            padding: 15px;
+            &_head{
+                font-size: 25px;
+                padding-bottom: 15px;
+                font-weight: 600;
+                color:#1a5a98;
+                @include respond(phone){
+                    font-size: 20px;
+                }
+            }
+            & span{
+                font-size: 17px;
+                @include respond(tab-port){
+                    font-size: 15px;
+                }
+            }
+
+        }
+    }
+
+}
+
+.about_portfolio{
+    font-weight: 700;
+    font-size: 14px;
+    color: white;
+    background: none;
+    border:none;
+    border: 2px solid #b6d27c;
+    // margin-left: 25px;
+    transition: 0.2s ease-in-out;
+    cursor: pointer;
+}
+

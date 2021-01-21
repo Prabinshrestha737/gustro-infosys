@@ -1,0 +1,135 @@
+.blog{
+    display: flex;
+    flex-wrap: wrap;
+    &_box{
+        width:250px;
+        padding: 15px 15px;
+        cursor: pointer;
+        &:hover .blog_img{
+            animation: box_hover 0.3s linear 0.1s;
+        }
+        @include respond(big-desktop){
+            width: 223px;
+        }
+        @include respond(tab-land){
+            width: 187px;
+            padding: 5px;
+        }
+        @include respond(tab-port){
+            width: 232px;
+            padding: 5px;
+        }
+        @include respond(phone){
+            width: 258px;
+            padding: 5px;
+        }
+        @include respond(small-phone){
+            width: 272px;
+            padding: 5px;
+        }
+        @include respond(ss-phone){
+            width: 544px;
+            padding: 5px;
+        }
+    }
+    &_img{
+        width: 100%;
+        height: 250px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 5px;
+    }
+    &_info{
+        padding: 15px 0px;
+        & span{
+            font-size: 13px;
+        }
+    }
+    &_head{
+        display: flex;
+        justify-content: space-between;
+    }
+    &_seeall{
+        font-size: 15px;
+        align-self: center;
+        cursor: pointer;
+        &:hover{
+            color: #1a5a98;
+        }
+    }
+}
+
+.blog_heading{
+    font-size: 30px;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding: 10px 0px;
+    color: #1a5a98;
+}
+
+.blog_para{
+    padding-top: 50px;
+}
+
+
+.blogview{
+    display: flex;
+    padding: 50px 0px;
+    // padding-bottom: 200px;
+    &_bg{
+        // padding-top: 200px;
+        background: none !important;
+        padding-top: 200px;
+        position: relative;
+        &::before{
+            content: '';
+            background:#1a5a98;
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            top: 0px;
+            z-index: -1;
+            // clip-path: polygon(0 0, 100% 0, 100% 87%, 30% 100%, 0 46%);
+            // @include respond(phone){
+            //     clip-path: polygon(0 0, 100% 0, 100% 87%, 30% 100%, 0 86%);
+            // }
+        }
+    }
+    &_img{
+        // position: relative;
+        padding-top: 30px;
+    } 
+    & img{
+        height: 350px;
+        width: auto;
+        @include respond(phone){
+            height: auto;
+            width: 100%;
+        }
+    }
+    &_devices img{
+        height: 300px;
+    }
+    &_info{
+        // width: 500px;
+        &_head{
+            padding-top: 0px;
+            color: #b6d27c;
+            @include respond(tab-port){
+                padding-bottom: 15px;
+            }
+            @include respond(phone){
+                padding-top: 15px;
+                padding-bottom: 15px;
+            }
+        }
+        &_para{
+            font-size: 17px;
+            color: white;
+            @include respond(tab-port){
+                font-size: 15px;
+            }
+        }
+    }
+}
