@@ -214,6 +214,11 @@
 
 .about_do_box_para span {
   font-size: 17px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 7;
 }
 
 @media (max-width: 991.98px) {

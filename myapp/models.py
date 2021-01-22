@@ -5,8 +5,8 @@ import datetime
 
 class BlogPost(models.Model):
     title = models.CharField(max_length=150)
-    Description = models.TextField()
-    image = models.ImageField(upload_to=None, blank=True)
+    description = models.TextField()
+    image = models.ImageField(upload_to='uploads/images/', blank=True)
     date = models.DateField(default=datetime.date.today, blank=True)
 
     def __str__(self):
@@ -39,6 +39,22 @@ class Career(models.Model):
     
     def __str__(self):
         return self.title
+
+
+class ServiceCategory(models.Model):
+    category = models.CharField(max_length=150)
+
+    def __str__(self):
+        return self.category
+
+
+class Service(models.Model):
+    category = models.ForeignKey(ServiceCategory, on_delete=models.CASCADE)
+    name = models.CharField(max_length=50)
+    description = models.CharField(max_length=350)
+
+    def __str__(self):
+        return self.name
     
 
 

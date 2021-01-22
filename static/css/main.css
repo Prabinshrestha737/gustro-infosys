@@ -83,6 +83,8 @@ h1, h2, h3, h4, h5, h6, p {
   top: 20px;
   z-index: 9999;
   width: 100%;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 
 .header_bg {
@@ -478,6 +480,61 @@ h1, h2, h3, h4, h5, h6, p {
 
 .plan_service:hover {
   background: white;
+}
+
+.read_more {
+  padding: 20px 0px;
+}
+
+.read_more span {
+  color: green;
+}
+
+.read_more a {
+  text-decoration: none;
+  color: #00256a;
+}
+
+.read_more a i {
+  color: #415f01;
+  display: none;
+}
+
+.read_more a:hover {
+  color: gray;
+}
+
+.read_more a:hover i {
+  color: gray;
+  display: inline-block;
+}
+
+.href_top {
+  position: fixed;
+  padding: 10px 15px;
+  color: white;
+  background: #80808059;
+  width: auto;
+  /* display: inline; */
+  border-radius: 6px;
+  bottom: 9px;
+  right: 9px;
+}
+
+.href_top a {
+  color: white;
+}
+
+a.href_top:hover {
+  text-decoration: none;
+  color: white;
+}
+
+.href_top i {
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  font-size: 15px;
+  line-height: 0px !important;
 }
 
 .employee {
@@ -1444,13 +1501,54 @@ html {
 
 .dark_mode {
   position: relative;
-  height: 40px;
-  width: 40px;
-  background: red;
 }
 
 .dark_mode input {
   position: absolute;
+  height: 100%;
+  width: 100%;
+  border-radius: none;
+  border-radius: 40px;
+  padding: 0px 20px;
+  visibility: hidden;
+}
+
+.dark_mode_label {
+  position: relative;
+  height: 26px;
+  width: 50px;
+  border: 2px solid black;
+  border-radius: 40px;
+  cursor: pointer;
+  -webkit-box-sizing: content-box !important;
+          box-sizing: content-box !important;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.dark_mode .dark_mode_change {
+  position: absolute;
+  height: 26px;
+  width: 26px;
+  border-radius: 25px;
+  background-color: blue;
+}
+
+.dark_mode_checked {
+  background: black;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 @-webkit-keyframes header_after_border {

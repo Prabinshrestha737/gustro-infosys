@@ -1,10 +1,38 @@
 .dark_mode{
     position: relative;
-    height: 40px;
-    width: 40px;
-    background: red;
+    
     & input{
         position: absolute;
-        
+        height: 100%;
+        width: 100%;
+        border-radius: none;
+        border-radius: 40px;
+        padding: 0px 20px;
+        visibility: hidden;
+    }
+    &_label{
+        position: relative;
+        height: 26px;
+        width: 50px;
+        // background: red;
+        border: 2px solid black;
+        border-radius: 40px;
+        cursor: pointer;
+        box-sizing: content-box !important;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-content: center;
+    }
+    .dark_mode_change{
+        position: absolute;
+        height: 26px;
+        width: 26px;
+        border-radius: 25px;
+        background-color: blue;
+    }
+    &_checked{
+        background: black;
+        justify-content: flex-end;
     }
 }

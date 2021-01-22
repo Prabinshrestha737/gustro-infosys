@@ -2,18 +2,18 @@
 
 {% load static %}
 
-
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'node_modules\bootstrap\dist\css\bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'node_modules\bootstrap\dist\css\bootstrap.min.css'%}">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{% static 'node_modules\bootstrap-icons\font\bootstrap-icons.css' %}">
-    <link rel="stylesheet" href="{% static 'owlcarousel\dist\assets\owl.carousel.min.css' %}">
-    <link rel="stylesheet" href="{% static 'owlcarousel\dist\assets\owl.theme.default.css' %}">
-    <link rel="stylesheet" href="{% static 'css\main.css' %}">
+    <link rel="stylesheet" href="{% static 'node_modules\bootstrap-icons\font\bootstrap-icons.css'%}">
+    <link rel="stylesheet" href="{% static 'owlcarousel\dist\assets\owl.carousel.min.css'%}">
+    <link rel="stylesheet" href="{% static 'owlcarousel\dist\assets\owl.theme.default.css'%}">
+    <link rel="stylesheet" href="{% static 'node_modules\aos\dist\aos.css'%}" />
+    <link rel="stylesheet" href="{% static 'css\main.css'%}">
     <!-- keep this only in about page -->
     <link rel="stylesheet" href="{% static 'css\about.css'%}">  
     <title>Document</title>
@@ -22,7 +22,7 @@
 
 
 <div class="postion-relative ">
-  <section class="header">
+  <section class="header" data-aos="fade-down" id="navbar">
     <div class="container bg-white">
       <div class="row py-2">
         <div class="col-md-5  header_contact">
@@ -62,28 +62,28 @@
                       <a class="nav-link  text-uppercase header_link" aria-current="page" href="{% url 'home' %}">Home</a>
                     </li>
                     <li class="nav-item header_links_list">
-                      <a class="nav-link  text-uppercase header_link" aria-current="page" href="{% url 'aboutus' %}">About Us</a>
+                      <a class="nav-link  text-uppercase header_link" aria-current="page" href="{% url 'aboutus'%}">About Us</a>
                     </li>
                     <li class="nav-item dropdown header_links_list header_drop">
                       <a class="nav-link dropdown-toggle text-uppercase header_drop_link" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Services
                       </a>
                       <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item text-capitalize" href="#">Web Development</a></li>
-                        <li><a class="dropdown-item text-capitalize" href="#">Software Development</a></li>
-                        <li><a class="dropdown-item text-capitalize" href="#">Digital marketing</a></li>
-                        <li><a class="dropdown-item text-capitalize" href="#">graphic design</a></li>
-                        <li><a class="dropdown-item text-capitalize" href="#">animation</a></li>
-                        <li><a class="dropdown-item text-capitalize" href="#">CCTV installation</a></li>
-                        <li><a class="dropdown-item text-capitalize" href="#">PVEX installation</a></li>
+                        <li><a class="dropdown-item text-capitalize" href="{% url 'services' %}">Web Development</a></li>
+                        <li><a class="dropdown-item text-capitalize" href="{% url 'services' %}">Software Development</a></li>
+                        <li><a class="dropdown-item text-capitalize" href="{% url 'services' %}">Digital marketing</a></li>
+                        <li><a class="dropdown-item text-capitalize" href="{% url 'services' %}">graphic design</a></li>
+                        <li><a class="dropdown-item text-capitalize" href="{% url 'services' %}">animation</a></li>
+                        <li><a class="dropdown-item text-capitalize" href="{% url 'services' %}">CCTV installation</a></li>
+                        <li><a class="dropdown-item text-capitalize" href="{% url 'services' %}">PVEX installation</a></li>
                       </ul>
                     </li>
                     <li class="nav-item header_links_list">
                       <a class="nav-link text-uppercase header_link" aria-current="page" href="{% url 'blog' %}">blogs</a>
                     </li>
-                    <li class="nav-item header_links_list">
-                      <a class="nav-link text-uppercase header_link " aria-current="page" href="{% url 'portfolio' %}">portfolio</a>
-                    </li>
+                    <!-- <li class="nav-item header_links_list">
+                      <a class="nav-link text-uppercase header_link " aria-current="page" href="#">prtfolio</a>
+                    </li> -->
                     <li class="nav-item header_links_list">
                       <a class="nav-link text-uppercase header_link" aria-current="page" href="{% url 'career'%}">Career</a>
                     </li>
@@ -111,7 +111,7 @@
         <div class="aboutus">
           <div class="row">
             <div class="col-lg-3 c col-md-12 order-lg-1 order-sm-3 order-3">
-              <div class="what">
+              <div class="what" data-aos="fade-up">
                 <div class="about_portfolio">
                   <p  class="text-capitalize text-center">Services we provide</p>
                 </div>
@@ -140,14 +140,14 @@
             </div>
             <div class=" col-lg-5 col-md-6  order-lg-2 order-sm-2 order-2">
               <div class="aboutus_info">
-                <p class="text-uppercase heading_1 aboutus_info_head">About us</p>
+                <p class="text-uppercase heading_1 aboutus_info_head" data-aos="fade-up">About us</p>
                 <p class="aboutus_info_para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate facilis, illo ea laudantium deserunt sunt, iure aspernatur voluptatibus provident magni harum tenetur eaque. Culpa, mollitia nihil dolore ipsa atque reiciendis! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur illum rem fuga magnam quod sed, nam explicabo placeat voluptatem fugiat eos provident tenetur veniam harum tempora alias facilis culpa quasi. Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni enim qui perspiciatis, suscipit blanditiis sed neque facere esse illo eum? Magni quod, consequatur alias obcaecati eaque qui aliquam omnis delectus.</p>
                 <button class="text-uppercase plan">Our Plan</button>
               </div>
             </div>
             <div class="col-lg-4 col-md-6 order-lg-3 order-sm-1 order-1">
               <div class="aboutus_img">
-                <img src="{% static 'image\group work.jpg'%}" alt="">
+                <img src="{% static 'image\group work.jpg' %}" alt="" data-aos="fade-left">
               </div>
             </div>
           </div>
@@ -165,26 +165,32 @@
         <div class="about_do">
 
           <div class="about_do_box" onclick="location.href('#')">
-            <div class="about_do_box_img order-md-1 order-sm-0 order-0" style="background-image: url({% static 'image/software developmant.png'%});">
+            <div class="about_do_box_img order-md-1 order-sm-0 order-0" style="background-image: url({% static 'image/software developmant.png'%});" data-aos="fade-up">
               <div class="about_do_box_info">
                 <p class='text-capitalize' >web development</p>
               </div>
             </div>
             
             <div class="about_do_box_para order-md-0 order-sm-1 order-1" >
-              <p class="text-capitalize about_do_box_para_head">web development</p>
+              <p class="text-capitalize about_do_box_para_head" >web development</p>
               <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis voluptates veniam doloribus sapiente! Adipisci quaerat sapiente voluptatem aperiam neque quibusdam doloremque ratione? Tenetur velit voluptas totam dignissimos pariatur at ea! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias ullam, unde quibusdam dolore placeat et aspernatur velit cupiditate. Provident maiores velit dolore magnam id ipsum officiis illum labore consequatur libero.</span>
+              <div class="read_more">
+                <span><a href="">read more ... <i class="bi bi-caret-right-fill"></i></a></span>
+              </div>
             </div>
           </div>
 
           <div class="about_do_box" onclick="location.href('#')">
             
             <div class="about_do_box_para order-md-1 order-sm-1 order-1">
-              <p class="text-capitalize about_do_box_para_head">web development</p>
+              <p class="text-capitalize about_do_box_para_head" >web development</p>
               <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis voluptates veniam doloribus sapiente! Adipisci quaerat sapiente voluptatem aperiam neque quibusdam doloremque ratione? Tenetur velit voluptas totam dignissimos pariatur at ea! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias ullam, unde quibusdam dolore placeat et aspernatur velit cupiditate. Provident maiores velit dolore magnam id ipsum officiis illum labore consequatur libero.</span>
+              <div class="read_more">
+                <span><a href="">read more ... <i class="bi bi-caret-right-fill"></i></a></span>
+              </div>
             </div>
 
-            <div class="about_do_box_img order-md-0 order-sm-0 order-0" style="background-image: url({% static 'image/software developmant.png'%});">
+            <div class="about_do_box_img order-md-0 order-sm-0 order-0" style="background-image: url({% static 'image/software developmant.png'%});" data-aos="fade-up">
               <div class="about_do_box_info">
                 <p class='text-capitalize' >web development</p>
               </div>
@@ -206,7 +212,7 @@
           <p class="text-center heading_1">our team</p>
         </div>
         <div class="employee_box">
-          <div class="employee">
+          <div class="employee" data-aos="fade-right">
             <div class="employee_image">
               <img src="{% static 'image\employees.jpg'%}" alt="">
             </div>
@@ -226,7 +232,27 @@
               </div>
             </div>
           </div>
-          <div class="employee">
+          <div class="employee" data-aos="fade-left">
+            <div class="employee_image">
+              <img src="{% static "image\employees.jpg"%}" alt="">
+            </div>
+            <div class="employee_info">
+              <div class="">
+                <p class="text-capitalize employee_name">nemar Dhungel</p>
+                <p class="employee_postion">CEO</p>
+              </div>
+              <div class="employee_media">
+                <i class="bi bi-facebook" onclick="location.href='#'"></i>
+                <i class="bi bi-instagram"onclick="location.href='#'"></i>
+                <i class="bi bi-twitter"onclick="location.href='#'"></i>
+                <i class="bi bi-google"onclick="location.href='#'"></i>
+              </div>
+              <div class="employee_testimoney">
+                <p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt accusantium impedit ad assumenda atque laboriosam perspiciatis eveniet quaerat earum distinctio eius obcaecati aliquam, alias exercitationem possimus tempora esse facere animi.</p>
+              </div>
+            </div>
+          </div>
+          <div class="employee" data-aos="fade-right">
             <div class="employee_image">
               <img src="{% static 'image\employees.jpg'%}" alt="">
             </div>
@@ -246,29 +272,9 @@
               </div>
             </div>
           </div>
-          <div class="employee">
+          <div class="employee" data-aos="fade-left">
             <div class="employee_image">
-              <img src="{% static 'image\employees.jpg'%}" alt="">
-            </div>
-            <div class="employee_info">
-              <div class="">
-                <p class="text-capitalize employee_name">nemar Dhungel</p>
-                <p class="employee_postion">CEO</p>
-              </div>
-              <div class="employee_media">
-                <i class="bi bi-facebook" onclick="location.href='#'"></i>
-                <i class="bi bi-instagram"onclick="location.href='#'"></i>
-                <i class="bi bi-twitter"onclick="location.href='#'"></i>
-                <i class="bi bi-google"onclick="location.href='#'"></i>
-              </div>
-              <div class="employee_testimoney">
-                <p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt accusantium impedit ad assumenda atque laboriosam perspiciatis eveniet quaerat earum distinctio eius obcaecati aliquam, alias exercitationem possimus tempora esse facere animi.</p>
-              </div>
-            </div>
-          </div>
-          <div class="employee">
-            <div class="employee_image">
-              <img src="{% static 'image\employees.jpg'%}" alt="">
+              <img src="{% static 'image\employees.jpg' %}" alt="">
             </div>
             <div class="employee_info">
               <div class="">
@@ -297,24 +303,24 @@
     <div class="row">
       <div class="col-md-12">
         <div class="partners_header">
-          <p class="text-center heading_1">our clients</p>
+          <p class="text-center heading_1">our clinets</p>
         </div>
-        <div class="partners_slide">
+        <div class="partners_slide" data-aos="fade-up">
           <div class="owl-carousel owl-theme">
-            <img class="item" src="{% static 'image\1.webp'%}" alt="">
-            <img class="item" src="{% static 'image\2.webp'%}" alt="">
-            <img class="item" src="{% static 'image\6.webp'%}" alt="">
-            <img class="item" src="{% static 'image\3.webp'%}" alt="">
-            <img class="item" src="{% static 'image\4.webp'%}" alt="">
-            <img class="item" src="{% static 'image\5.webp'%}" alt="">
-            <img class="item" src="{% static 'image\7.webp'%}" alt="">
-            <img class="item" src="{% static 'image\8.webp'%}" alt="">
-            <img class="item" src="{% static 'image\9.webp'%}" alt="">
-            <img class="item" src="{% static 'image\10.webp'%}" alt="">
-            <img class="item" src="{% static 'image\7.webp'%}" alt="">
-            <img class="item" src="{% static 'image\8.webp'%}" alt="">
-            <img class="item" src="{% static 'image\9.webp'%}" alt="">
-            <img class="item" src="{% static 'image\10.webp'%}" alt="">
+            <img class="item" src="{% static 'image\1'%}.webp" alt="">
+            <img class="item" src="{% static 'image\2'%}.webp" alt="">
+            <img class="item" src="{% static 'image\6'%}.webp" alt="">
+            <img class="item" src="{% static 'image\3'%}.webp" alt="">
+            <img class="item" src="{% static 'image\4'%}.webp" alt="">
+            <img class="item" src="{% static 'image\5'%}.webp" alt="">
+            <img class="item" src="{% static 'image\7'%}.webp" alt="">
+            <img class="item" src="{% static 'image\8'%}.webp" alt="">
+            <img class="item" src="{% static 'image\9'%}.webp" alt="">
+            <img class="item" src="{% static 'image\10'%}.webp" alt="">
+            <img class="item" src="{% static 'image\7'%}.webp" alt="">
+            <img class="item" src="{% static 'image\8'%}.webp" alt="">
+            <img class="item" src="{% static 'image\9'%}.webp" alt="">
+            <img class="item" src="{% static 'image\10'%}.webp" alt="">
           </div>
       </div>
     </div>
@@ -402,10 +408,14 @@
   </div>
 </section>
 
+<a  href="#goTop" class="href_top" id="href_top"><i class="bi bi-arrow-up-short"></i></a>
 
-<script src="{% static 'node_modules\jquery\dist\jquery.min.js' %}"></script>
-<script src="{% static 'node_modules\bootstrap\dist\js\bootstrap.min.js' %}"></script>
+
+<script src="{% static 'node_modules\jquery\dist\jquery.min.js'%}"></script>
+<script src="{% static 'node_modules\bootstrap\dist\js\bootstrap.min.js'%}"></script>
 <script src="{% static 'owlcarousel\dist\owl.carousel.js'%}"></script>
+<script src="{% static 'node_modules\aos\dist\aos.js'%}"></script>
+<script src="{% static 'js\main.js'%}"></script>
 <script src="{% static 'particles.js\particles.js'%}"></script>
 <script>
   $('.owl-carousel').owlCarousel({

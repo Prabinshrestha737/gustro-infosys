@@ -1,23 +1,27 @@
 <!DOCTYPE html>
+
+{% load static %}
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="node_modules\bootstrap\dist\css\bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'node_modules\bootstrap\dist\css\bootstrap.min.css'%}">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="node_modules\bootstrap-icons\font\bootstrap-icons.css">
-    <link rel="stylesheet" href="owlcarousel\dist\assets\owl.carousel.min.css">
-    <link rel="stylesheet" href="owlcarousel\dist\assets\owl.theme.default.css">
-    <link rel="stylesheet" href="css\main.css">
+    <link rel="stylesheet" href="{% static 'node_modules\bootstrap-icons\font\bootstrap-icons.css'%}">
+    <link rel="stylesheet" href="{% static 'owlcarousel\dist\assets\owl.carousel.min.css'%}">
+    <link rel="stylesheet" href="{% static 'owlcarousel\dist\assets\owl.theme.default.css'%}">
+    <link rel="stylesheet" href="{% static 'node_modules\aos\dist\aos.css'%}" />
+    <link rel="stylesheet" href="{% static 'css\main.css'%}">
     <!-- keep this only in service page -->
-    <link rel="stylesheet" href="css\web_development.css">  
+    <link rel="stylesheet" href="{% static 'css\web_development.css'%}">  
     <title>Document</title>
 </head>
 <body >
 
 <div class="postion-relative ">
-  <section class="header">
+  <section class="header" data-aos="fade-down">
     <div class="container bg-white">
       <div class="row py-2">
         <div class="col-md-5  header_contact">
@@ -41,49 +45,50 @@
     </div>
   
   
-    <section class="">
+    <section class="" id="goTop">
       <div class="container header_bg">
         <div class="row">
           <div class="col-md-12">
             <nav class="navbar navbar-expand-lg navbar-light ">
               <div class="container-fluid">
-                <img class="header_logo" src="image\gustologo.jpg" alt="">
+                <img class="header_logo" src="{% static 'image\gustologo.jpg'%}" alt="">
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
                   <ul class="navbar-nav mb-2 mb-lg-0 header_links">
                     <li class="nav-item header_links_list">
-                      <a class="nav-link  text-uppercase header_link" aria-current="page" href="#">Home</a>
+                      <a class="nav-link  text-uppercase header_link" aria-current="page" href="{% url 'home' %}">Home</a>
                     </li>
                     <li class="nav-item header_links_list">
-                      <a class="nav-link  text-uppercase header_link" aria-current="page" href="#">About Us</a>
+                      <a class="nav-link  text-uppercase header_link" aria-current="page" href="{% url 'aboutus' %}">About Us</a>
                     </li>
                     <li class="nav-item dropdown header_links_list header_drop">
                       <a class="nav-link dropdown-toggle text-uppercase header_drop_link" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Services
                       </a>
                       <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item text-capitalize" href="#">Web Development</a></li>
-                        <li><a class="dropdown-item text-capitalize" href="#">Software Development</a></li>
-                        <li><a class="dropdown-item text-capitalize" href="#">Digital marketing</a></li>
-                        <li><a class="dropdown-item text-capitalize" href="#">graphic design</a></li>
-                        <li><a class="dropdown-item text-capitalize" href="#">animation</a></li>
-                        <li><a class="dropdown-item text-capitalize" href="#">CCTV installation</a></li>
-                        <li><a class="dropdown-item text-capitalize" href="#">PVEX installation</a></li>
+                        <li><a class="dropdown-item text-capitalize" href="{% url 'services' %}">All Services</a></li>
+                        <li><a class="dropdown-item text-capitalize" href="{% url 'services' %}">Web Development</a></li>
+                        <li><a class="dropdown-item text-capitalize" href="{% url 'services' %}">Software Development</a></li>
+                        <li><a class="dropdown-item text-capitalize" href="{% url 'services' %}">Digital marketing</a></li>
+                        <li><a class="dropdown-item text-capitalize" href="{% url 'services' %}">graphic design</a></li>
+                        <li><a class="dropdown-item text-capitalize" href="{% url 'services' %}">animation</a></li>
+                        <li><a class="dropdown-item text-capitalize" href="{% url 'services' %}">CCTV installation</a></li>
+                        <li><a class="dropdown-item text-capitalize" href="{% url 'services' %}">PVEX installation</a></li>
                       </ul>
                     </li>
                     <li class="nav-item header_links_list">
-                      <a class="nav-link text-uppercase header_link" aria-current="page" href="#">blogs</a>
+                      <a class="nav-link text-uppercase header_link" aria-current="page" href="{% url 'blog'%}">blogs</a>
                     </li>
-                    <li class="nav-item header_links_list">
+                    <!-- <li class="nav-item header_links_list">
                       <a class="nav-link text-uppercase header_link " aria-current="page" href="#">prtfolio</a>
+                    </li> -->
+                    <li class="nav-item header_links_list">
+                      <a class="nav-link text-uppercase header_link" aria-current="page" href="{% url 'career'%}">Career</a>
                     </li>
                     <li class="nav-item header_links_list">
-                      <a class="nav-link text-uppercase header_link" aria-current="page" href="#">Carer</a>
-                    </li>
-                    <li class="nav-item header_links_list">
-                      <a class="nav-link text-uppercase header_link" aria-current="page" href="#">contact us</a>
+                      <a class="nav-link text-uppercase header_link" aria-current="page" href="{% url 'contact'%}">contact us</a>
                     </li>
                   </ul>
                 </div>
@@ -147,53 +152,29 @@
     <div class="row">
       <div class="col-lg-8 col-md-8 ">
         <div class="row">
-          <div class="col-sm-6">
-            <div class="service_box" onClick="location.href=('#')">
-              <div class="service_img" style="background-image: url('image/web development.png');">
+        {% for service in services%}
+          <div class="col-sm-6" data-aos="fade-up">
+            <div class="service_box" onClick="location.href=('#')" >
+              <div class="service_img" style="background-image: url('{% static 'image/web development.png'%}');">
                 <i class="bi bi-circle"></i>
               </div>
-              <p class="service_info">web design</p>
+              <p class="service_info">{{service.name}}</p>
             </div>
           </div>
-          <div class="col-sm-6">
-            <div class="service_box" onClick="location.href=('#')">
-              <div class="service_img" style="background-image: url('image/web development.png');">
-                <i class="bi bi-circle"></i>
-              </div>
-              <p class="service_info">web design</p>
-            </div>
-          </div>
-          <div class="col-sm-6">
-            <div class="service_box" onClick="location.href=('#')">
-              <div class="service_img" style="background-image: url('image/web development.png');">
-                <i class="bi bi-circle"></i>
-              </div>
-              <p class="service_info">web design</p>
-            </div>
-          </div>
-          <div class="col-sm-6">
-            <div class="service_box" onClick="location.href=('#')">
-              <div class="service_img" style="background-image: url('image/web development.png');">
-                <i class="bi bi-circle"></i>
-              </div>
-              <p class="service_info">web design</p>
-            </div>
-          </div>
+          {% endfor %}
         </div>
       </div>
-      <div class="col-lg-3 col-md-4">
+      <div class="col-lg-3 col-md-4" data-aos="fade-down">
         <div class="out_cata">
-          <p class="text-uppercase">catagories</p>
+          <p class="text-uppercase">categories</p>
+          {% for categories in category %}
           <ul>
-            <li><a href="">web development</a></li>
-            <li><a href="">web development</a></li>
-            <li><a href="">web development</a></li>
-            <li><a href="">web development</a></li>
-            <li><a href="">web development</a></li>
+            <li><a href="">{{categories.category}}</a></li>
           </ul>
+          {% endfor %}
         </div>
 
-        <div class="news_sub">
+        <div class="news_sub" data-aos="fade-down">
           <p class="text-uppercase news_sub_top">Subscribe for newsletter</p>
           <div class="news_sub_form">
             <form>
@@ -290,13 +271,18 @@
 </section>
 
 
+<a  href="#goTop" class="href_top" id="href_top"><i class="bi bi-arrow-up-short"></i></a>
 
 
 
-<script src="node_modules\jquery\dist\jquery.min.js"></script>
-<script src="node_modules\bootstrap\dist\js\bootstrap.min.js"></script>
-<script src="owlcarousel\dist\owl.carousel.js"></script>
-<script src="particles.js\particles.js"></script>
+
+
+<script src="{% static 'node_modules\jquery\dist\jquery.min.js'%}"></script>
+<script src="{% static 'node_modules\bootstrap\dist\js\bootstrap.min.js'%}"></script>
+<script src="{% static 'owlcarousel\dist\owl.carousel.js'%}"></script>
+<script src="{% static 'node_modules\aos\dist\aos.js'%}"></script>
+<script src="{% static 'js\main.js'%}"></script>
+<script src="{% static 'particles.js\particles.js'%}"></script>
 <script>
   $('.owl-carousel').owlCarousel({
     loop:true,

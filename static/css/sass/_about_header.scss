@@ -308,12 +308,18 @@
                 padding-bottom: 15px;
                 font-weight: 600;
                 color:#1a5a98;
+                
                 @include respond(phone){
                     font-size: 20px;
                 }
             }
             & span{
                 font-size: 17px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 7;
                 @include respond(tab-port){
                     font-size: 15px;
                 }
