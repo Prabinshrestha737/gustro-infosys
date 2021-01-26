@@ -28,11 +28,11 @@
         <div class="col-md-5  header_contact">
           <div class="header_contact_phone">
             <i class="bi bi-telephone-fill "></i>
-            <span>+977 - 0000000000</span>
+            <span>{{infos.phone}}</span>
           </div>
           <div class="header_contact_email">
             <i class="bi bi-envelope-fill "></i>
-            <span>example@email.com</span>
+            <span>{{infos.email}}</span>
           </div>
         </div>
         <div class="col-md-7  header_social">
@@ -141,7 +141,9 @@
             <div class=" col-lg-5 col-md-6  order-lg-2 order-sm-2 order-2">
               <div class="aboutus_info">
                 <p class="text-uppercase heading_1 aboutus_info_head" data-aos="fade-up">About us</p>
-                <p class="aboutus_info_para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate facilis, illo ea laudantium deserunt sunt, iure aspernatur voluptatibus provident magni harum tenetur eaque. Culpa, mollitia nihil dolore ipsa atque reiciendis! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur illum rem fuga magnam quod sed, nam explicabo placeat voluptatem fugiat eos provident tenetur veniam harum tempora alias facilis culpa quasi. Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni enim qui perspiciatis, suscipit blanditiis sed neque facere esse illo eum? Magni quod, consequatur alias obcaecati eaque qui aliquam omnis delectus.</p>
+                {% for x in about %}
+                <p class="aboutus_info_para">{{x.description}}</p>
+                {% endfor %}
                 <button class="text-uppercase plan">Our Plan</button>
               </div>
             </div>

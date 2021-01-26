@@ -72,7 +72,6 @@
 }
 
 .what_box {
-  background-color: #b6d27c;
   text-align: center;
   text-transform: capitalize;
   padding: 7px 15px;
@@ -87,6 +86,20 @@
     margin: 3px 3px;
     font-size: 15px;
   }
+}
+
+.what_box_img {
+  height: 150px !important;
+  width: auto !important;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+  -webkit-box-shadow: 2px 2px 10px #fffffff0;
+          box-shadow: 2px 2px 10px #fffffff0;
+}
+
+.what_box_img:hover {
+  -webkit-animation: box_hover 0.3s linear 0.1s;
+          animation: box_hover 0.3s linear 0.1s;
 }
 
 .about_do_box {

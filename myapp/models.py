@@ -1,11 +1,13 @@
 from django.db import models
 import datetime
 
+from ckeditor.fields import RichTextField
+
 # Create your models here.
 
 class BlogPost(models.Model):
     title = models.CharField(max_length=150)
-    description = models.TextField()
+    description = RichTextField()
     image = models.ImageField(upload_to='uploads/images/', blank=True)
     date = models.DateField(default=datetime.date.today, blank=True)
 
@@ -55,6 +57,19 @@ class Service(models.Model):
 
     def __str__(self):
         return self.name
-    
 
 
+class CompanyInfo(models.Model):
+    email = models.EmailField(max_length=254)
+    phone = models.CharField(max_length=15)
+    location = models.CharField(max_length=50, default="Sallaghari")
+    facebook = models.CharField(max_length=150)
+    twitter = models.CharField(max_length=150)
+    instagram = models.CharField(max_length=150)
+    google = models.CharField(max_length=50)
+
+    def __str__(self):
+        return self.email
+
+class AboutUs(models.Model):
+    description = models.TextField()
