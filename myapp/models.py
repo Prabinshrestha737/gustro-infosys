@@ -107,7 +107,6 @@ class PlanForm(models.Model):
     development_type = models.CharField(max_length=150)
     plan_type = models.CharField(max_length=150)
 
-
     def __str__(self):
         return self.email
     

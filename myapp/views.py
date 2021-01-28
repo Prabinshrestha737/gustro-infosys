@@ -159,8 +159,7 @@ def chooseplan(request):
         
         print(plan)
 
-        plan.save()
-        
+        plan.save()   
     plan = OurPlan.objects.all()
     data = {}
     data['plan'] = plan 

@@ -16,7 +16,9 @@
     <link rel="stylesheet" href="{% static 'owlcarousel\dist\assets\owl.theme.default.css'%}">
     <link rel="stylesheet" href="{% static 'node_modules\aos\dist\aos.css'%}" />
     <link rel="stylesheet" href="{% static 'css\main.css'%}">
+
     <title>Document</title>
+        
 </head>
 <body >
 
@@ -29,7 +31,7 @@
             <i class="bi bi-telephone-fill "></i>
             <span>{{infos.phone}}</span>
           </div>
-          <div class="header_contact_email">
+          <div class="header_contact_email" >
             <i class="bi bi-envelope-fill "></i>
             <span>{{infos.email}}</span>
           </div>
@@ -108,51 +110,23 @@
         <div class="employee_header blog_head pt-5" >
           <p class="text-center plan_top_head">web development</p>
         </div>
-        
         <div class="plan_flex">
+        {% for plans in plan %}
         <div class="plan_box"  data-aos="fade-right">
           <div class="plan_box_head">
-            <p class="text-capitalized text-center plan_box_type">Basic</p>
+            <p class="text-capitalized text-center plan_box_type">{{plans.plan_type}}</p> 
             <img class="plan_box_img" src="{% static 'image\development.svg'%}" alt="">
             
             <div class="plan_box_amount">
-              <i class="plan_box_price">Rs. 9999</i>
-              <span class="plan_box_month"> /per month</span>
+              <i class="plan_box_price">{{plans.price}}</i>
             </div>
           </div>
+          
 
           <div class="plan_box_details_bg">
             <div class="plan_box_details">
-              <i class="bi bi-check2-circle"></i>
-              <span>unlimited storage</span>
-            </div>
-            <div class="plan_box_details">
-              <i class="bi bi-check2-circle"></i>
-              <span>unlimited storage</span>
-            </div>
-            <div class="plan_box_details">
-              <i class="bi bi-check2-circle"></i>
-              <span>unlimited storage</span>
-            </div>
-            <div class="plan_box_details">
-              <i class="bi bi-check2-circle"></i>
-              <span>unlimited storage</span>
-            </div>
-            <div class="plan_box_details">
-              <i class="bi bi-check2-circle"></i>
-              <span>unlimited storage</span>
-            </div>
-            <div class="plan_box_details">
-              <i class="bi bi-check2-circle"></i>
-              <span>unlimited storage</span>
-            </div>
-            <div class="plan_box_details">
-              <i class="bi bi-check2-circle"></i>
-              <span>unlimited storage</span>
-            </div>
-            <div class="plan_box_details">
-              <i class="bi bi-check2-circle"></i>
-              <span>unlimited storage</span>
+              <i class="bi bi-check2-circle" ></i>
+              <span>{{plans.description}}</span>
             </div>
             <div class="plan_box_but">
               <button class="text-capitalize text-center " onclick="location.href='{% url 'chooseplan'  %}'">choose Plan</button>
@@ -160,105 +134,8 @@
           </div>
         </div>
 
-        <div class="plan_box plan_box_middle" data-aos="fade-up">
-          <div class="plan_box_head">
-            <p class="text-capitalize text-center plan_box_type">standard</p>
-          <img class="plan_box_img" src="{% static 'image\development.svg'%}" alt="">
-          <div class="plan_box_amount">
-            <i class="plan_box_price">Rs. 19999</i>
-            <span class="plan_box_month"> /per month</span>
-          </div>
-          </div>
-          <div class="plan_box_details_bg">
-            <div class="plan_box_details">
-              <i class="bi bi-check2-circle"></i>
-              <span>unlimited storage</span>
-            </div>
-            <div class="plan_box_details">
-              <i class="bi bi-check2-circle"></i>
-              <span>unlimited storage</span>
-            </div>
-            <div class="plan_box_details">
-              <i class="bi bi-check2-circle"></i>
-              <span>unlimited storage</span>
-            </div>
-            <div class="plan_box_details">
-              <i class="bi bi-check2-circle"></i>
-              <span>unlimited storage</span>
-            </div>
-            <div class="plan_box_details">
-              <i class="bi bi-check2-circle"></i>
-              <span>unlimited storage</span>
-            </div>
-            <div class="plan_box_details">
-              <i class="bi bi-check2-circle"></i>
-              <span>unlimited storage</span>
-            </div>
-            <div class="plan_box_details">
-              <i class="bi bi-check2-circle"></i>
-              <span>unlimited storage</span>
-            </div>
-            <div class="plan_box_details">
-              <i class="bi bi-check2-circle"></i>
-              <span>unlimited storage</span>
-            </div>
-            <div class="plan_box_but">
-              <button class="text-capitalize text-center plan_box_but" onclick="location.href='#'">choose Plan</button>
-            </div>
-          </div>
-        </div>
-
-        <div class="plan_box " data-aos="fade-left">
-          <div class="plan_box_head">
-            <p class="text-capitalized text-center plan_box_type">Premium</p>
-            <img class="plan_box_img" src="{% static 'image\development.svg'%}" alt="">
-            
-            <div class="plan_box_amount">
-              <i class="plan_box_price">Rs. 39999</i>
-              <span class="plan_box_month"> /per month</span>
-            </div>
-          </div>
-
-          <div class="plan_box_details_bg">
-            <div class="plan_box_details">
-              <i class="bi bi-check2-circle"></i>
-              <span>unlimited storage</span>
-            </div>
-            <div class="plan_box_details">
-              <i class="bi bi-check2-circle"></i>
-              <span>unlimited storage</span>
-            </div>
-            <div class="plan_box_details">
-              <i class="bi bi-check2-circle"></i>
-              <span>unlimited storage</span>
-            </div>
-            <div class="plan_box_details">
-              <i class="bi bi-check2-circle"></i>
-              <span>unlimited storage</span>
-            </div>
-            <div class="plan_box_details">
-              <i class="bi bi-check2-circle"></i>
-              <span>unlimited storage</span>
-            </div>
-            <div class="plan_box_details">
-              <i class="bi bi-check2-circle"></i>
-              <span>unlimited storage</span>
-            </div>
-            <div class="plan_box_details">
-              <i class="bi bi-check2-circle"></i>
-              <span>unlimited storage</span>
-            </div>
-            <div class="plan_box_details">
-              <i class="bi bi-check2-circle"></i>
-              <span>unlimited storage</span>
-            </div>
-            <div class="plan_box_but">
-              <button class="text-capitalize text-center plan_box_but" onclick="location.href='#'">choose Plan</button>
-            </div>
-          </div>
-        </div>
-        </div>
-      </div> 
+        {% endfor %}
+ 
       
       <div class="col-md-12 p-0 pt-5 ">
         <div class="employee_header blog_head pt-5" >
