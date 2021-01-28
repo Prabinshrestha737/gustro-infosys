@@ -81,9 +81,9 @@
                     <li class="nav-item header_links_list">
                       <a class="nav-link text-uppercase header_link" aria-current="page" href="{% url 'blog' %}">blogs</a>
                     </li>
-                    <!-- <li class="nav-item header_links_list">
-                      <a class="nav-link text-uppercase header_link " aria-current="page" href="#">prtfolio</a>
-                    </li> -->
+                    <li class="nav-item header_links_list">
+                      <a class="nav-link text-uppercase header_link " aria-current="page" href="{% url 'portfolio' %}">portfolio</a>
+                    </li> 
                     <li class="nav-item header_links_list">
                       <a class="nav-link text-uppercase header_link" aria-current="page" href="{% url 'career'%}">Career</a>
                     </li>
@@ -291,7 +291,10 @@
     margin:10,
     nav:true,
     dots: false,
-    autoplay: true,
+    autoplay:true,
+    autoplayTimeout:1000,
+    smartSpeed: 1000,
+    autoplayHoverPause: true,
     responsive:{
         0:{
             items:3

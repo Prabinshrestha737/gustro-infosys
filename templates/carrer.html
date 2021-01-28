@@ -79,6 +79,10 @@
                     <li class="nav-item header_links_list">
                       <a class="nav-link text-uppercase header_link" aria-current="page" href="{% url 'blog'%}">blogs</a>
                     </li>
+
+                    <li class="nav-item header_links_list">
+                      <a class="nav-link text-uppercase header_link " aria-current="page" href="{% url 'portfolio'%}">portfolio</a>
+                    </li>
                     
                     <li class="nav-item header_links_list">
                       <a class="nav-link text-uppercase header_link" aria-current="page" href="{% url 'career' %}">Career</a>
@@ -156,7 +160,7 @@
 
           {% for category in categories %}
           <ul>
-            <li><a href="{% url 'career' %}"><sapn>{{category.category}}</sapn> <sapn>{{count}}</sapn></a></li>
+            <li><a href="?category={{category.id}}"><sapn>{{category.category}}</sapn> <sapn>{{category.id}}</sapn></a></li>
           </ul>
           {% endfor %}
         </div>
@@ -275,7 +279,10 @@
     margin:10,
     nav:true,
     dots: false,
-    autoplay: true,
+    autoplay:true,
+    autoplayTimeout:1000,
+    smartSpeed: 1000,
+    autoplayHoverPause: true,
     responsive:{
         0:{
             items:3

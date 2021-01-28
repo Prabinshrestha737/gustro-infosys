@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block body%}
+
+<section class="aboutus_bg">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="aboutus">
+          <div class="row">
+            <div class="col-lg-3 c col-md-12 order-lg-1 order-sm-3 order-3">
+              <div class="what" data-aos="fade-up">
+                <div class="about_portfolio">
+                  <p  class="text-capitalize text-center">Services we provide</p>
+                </div>
+                <div class="what_box">
+                  <p>web development</p>
+                </div>
+                <div class="what_box">
+                  <p>software development</p>
+                </div>
+                <div class="what_box">
+                  <p>digital marketing</p>
+                </div>
+                <div class="what_box">
+                  <p>graphic design</p>
+                </div>
+                <div class="what_box">
+                  <p>animation</p>
+                </div>
+                <div class="what_box">
+                  <p>CCTV installation</p>
+                </div>
+                <div class="what_box">
+                  <p>PVEX installation</p>
+                </div>
+              </div>
+            </div>
+            <div class=" col-lg-5 col-md-6  order-lg-2 order-sm-2 order-2">
+              <div class="aboutus_info">
+                <p class="text-uppercase heading_1 aboutus_info_head" data-aos="fade-up">About us</p>
+                {% for x in about %}
+                <p class="aboutus_info_para">{{x.description}}</p>
+                {% endfor %}
+                <button class="text-uppercase plan" onclick="location.href='{% url 'ourplan' %}'"> Our Plan </a></button>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 order-lg-3 order-sm-1 order-1">
+              <div class="aboutus_img">
+                <img src="{% static 'image\group work.jpg' %}" alt="" data-aos="fade-left">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 py-5">
+        <div class="about_do">
+
+          <div class="about_do_box" onclick="location.href('#')">
+            <div class="about_do_box_img order-md-1 order-sm-0 order-0" style="background-image: url({% static 'image/software developmant.png'%});" data-aos="fade-up">
+              <div class="about_do_box_info">
+                <p class='text-capitalize' >web development</p>
+              </div>
+            </div>
+            
+            <div class="about_do_box_para order-md-0 order-sm-1 order-1" >
+              <p class="text-capitalize about_do_box_para_head" >web development</p>
+              <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis voluptates veniam doloribus sapiente! Adipisci quaerat sapiente voluptatem aperiam neque quibusdam doloremque ratione? Tenetur velit voluptas totam dignissimos pariatur at ea! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias ullam, unde quibusdam dolore placeat et aspernatur velit cupiditate. Provident maiores velit dolore magnam id ipsum officiis illum labore consequatur libero.</span>
+              <div class="read_more">
+                <span><a href="">read more ... <i class="bi bi-caret-right-fill"></i></a></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="about_do_box" onclick="location.href('#')">
+            
+            <div class="about_do_box_para order-md-1 order-sm-1 order-1">
+              <p class="text-capitalize about_do_box_para_head" >web development</p>
+              <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis voluptates veniam doloribus sapiente! Adipisci quaerat sapiente voluptatem aperiam neque quibusdam doloremque ratione? Tenetur velit voluptas totam dignissimos pariatur at ea! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias ullam, unde quibusdam dolore placeat et aspernatur velit cupiditate. Provident maiores velit dolore magnam id ipsum officiis illum labore consequatur libero.</span>
+              <div class="read_more">
+                <span><a href="">read more ... <i class="bi bi-caret-right-fill"></i></a></span>
+              </div>
+            </div>
+
+            <div class="about_do_box_img order-md-0 order-sm-0 order-0" style="background-image: url({% static 'image/software developmant.png'%});" data-aos="fade-up">
+              <div class="about_do_box_info">
+                <p class='text-capitalize' >web development</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 py-5  ">
+        <div class="employee_header">
+          <p class="text-center heading_1">our team</p>
+        </div>
+        <div class="employee_box">
+          <div class="employee" data-aos="fade-right">
+            <div class="employee_image">
+              <img src="{% static 'image\employees.jpg'%}" alt="">
+            </div>
+            <div class="employee_info">
+              <div class="">
+                <p class="text-capitalize employee_name">nemar Dhungel</p>
+                <p class="employee_postion">CEO</p>
+              </div>
+              <div class="employee_media">
+                <i class="bi bi-facebook" onclick="location.href='#'"></i>
+                <i class="bi bi-instagram"onclick="location.href='#'"></i>
+                <i class="bi bi-twitter"onclick="location.href='#'"></i>
+                <i class="bi bi-google"onclick="location.href='#'"></i>
+              </div>
+              <div class="employee_testimoney">
+                <p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt accusantium impedit ad assumenda atque laboriosam perspiciatis eveniet quaerat earum distinctio eius obcaecati aliquam, alias exercitationem possimus tempora esse facere animi.</p>
+              </div>
+            </div>
+          </div>
+          <div class="employee" data-aos="fade-left">
+            <div class="employee_image">
+              <img src="{% static "image\employees.jpg"%}" alt="">
+            </div>
+            <div class="employee_info">
+              <div class="">
+                <p class="text-capitalize employee_name">nemar Dhungel</p>
+                <p class="employee_postion">CEO</p>
+              </div>
+              <div class="employee_media">
+                <i class="bi bi-facebook" onclick="location.href='#'"></i>
+                <i class="bi bi-instagram"onclick="location.href='#'"></i>
+                <i class="bi bi-twitter"onclick="location.href='#'"></i>
+                <i class="bi bi-google"onclick="location.href='#'"></i>
+              </div>
+              <div class="employee_testimoney">
+                <p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt accusantium impedit ad assumenda atque laboriosam perspiciatis eveniet quaerat earum distinctio eius obcaecati aliquam, alias exercitationem possimus tempora esse facere animi.</p>
+              </div>
+            </div>
+          </div>
+          <div class="employee" data-aos="fade-right">
+            <div class="employee_image">
+              <img src="{% static 'image\employees.jpg'%}" alt="">
+            </div>
+            <div class="employee_info">
+              <div class="">
+                <p class="text-capitalize employee_name">nemar Dhungel</p>
+                <p class="employee_postion">CEO</p>
+              </div>
+              <div class="employee_media">
+                <i class="bi bi-facebook" onclick="location.href='#'"></i>
+                <i class="bi bi-instagram"onclick="location.href='#'"></i>
+                <i class="bi bi-twitter"onclick="location.href='#'"></i>
+                <i class="bi bi-google"onclick="location.href='#'"></i>
+              </div>
+              <div class="employee_testimoney">
+                <p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt accusantium impedit ad assumenda atque laboriosam perspiciatis eveniet quaerat earum distinctio eius obcaecati aliquam, alias exercitationem possimus tempora esse facere animi.</p>
+              </div>
+            </div>
+          </div>
+          <div class="employee" data-aos="fade-left">
+            <div class="employee_image">
+              <img src="{% static 'image\employees.jpg' %}" alt="">
+            </div>
+            <div class="employee_info">
+              <div class="">
+                <p class="text-capitalize employee_name">nemar Dhungel</p>
+                <p class="employee_postion">CEO</p>
+              </div>
+              <div class="employee_media">
+                <i class="bi bi-facebook" onclick="location.href='#'"></i>
+                <i class="bi bi-instagram"onclick="location.href='#'"></i>
+                <i class="bi bi-twitter"onclick="location.href='#'"></i>
+                <i class="bi bi-google"onclick="location.href='#'"></i>
+              </div>
+              <div class="employee_testimoney">
+                <p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt accusantium impedit ad assumenda atque laboriosam perspiciatis eveniet quaerat earum distinctio eius obcaecati aliquam, alias exercitationem possimus tempora esse facere animi.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

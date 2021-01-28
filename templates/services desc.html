@@ -1,4 +1,7 @@
 <!DOCTYPE html>
+
+{% load static %}
+
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -77,9 +80,9 @@
                     <li class="nav-item header_links_list">
                       <a class="nav-link text-uppercase header_link" aria-current="page" href="{% url 'blog' %}">blogs</a>
                     </li>
-                    <!-- <li class="nav-item header_links_list">
-                      <a class="nav-link text-uppercase header_link " aria-current="page" href="#">prtfolio</a>
-                    </li> -->
+                     <li class="nav-item header_links_list">
+                      <a class="nav-link text-uppercase header_link " aria-current="page" href="{% url 'portfolio' %}">portfolio</a>
+                    </li> 
                     <li class="nav-item header_links_list">
                       <a class="nav-link text-uppercase header_link" aria-current="page" href="{% url 'career' %}">Career</a>
                     </li>
@@ -115,19 +118,19 @@
             <div class="col-lg-12  ">
               <div class="what">
                 <div class="what_box">
-                  <p>Html / CSS</p>
+                  <img class="what_box_img" src="{% static 'image\html.png'%}" alt="">
                 </div>
                 <div class="what_box">
-                  <p>Jquery / react / Angular</p>
+                  <img class="what_box_img" src="{% static 'image\css.png'%}" alt="">
                 </div>
                 <div class="what_box">
-                  <p>Bootstrap</p>
+                  <img class="what_box_img" src="{% static 'image\jquery.png'%}" alt="">
                 </div>
                 <div class="what_box">
-                  <p>Js librarbies</p>
+                  <img class="what_box_img" src="{% static 'image\js.png'%}" alt="">
                 </div>
                 <div class="what_box">
-                  <p>Many More</p>
+                  <img class="what_box_img" src="{% static 'image\html.png'%}" alt="">
                 </div>
               </div>
             </div>
@@ -159,13 +162,11 @@
       <div class=" col-lg-3 col-md-4">
         <div class="out_cata">
           <p class="text-uppercase">catagories</p>
+          {% for category in category%}
           <ul>
-            <li><a href="">web development</a></li>
-            <li><a href="">web development</a></li>
-            <li><a href="">web development</a></li>
-            <li><a href="">web development</a></li>
-            <li><a href="">web development</a></li>
+            <li><a href="">{{category.category}}</a></li>
           </ul>
+          {% endfor %}
         </div>
 
         <div class="news_sub">
@@ -280,7 +281,10 @@
     margin:10,
     nav:true,
     dots: false,
-    autoplay: true,
+    autoplay:true,
+    autoplayTimeout:1000,
+    smartSpeed: 1000,
+    autoplayHoverPause: true,
     responsive:{
         0:{
             items:3

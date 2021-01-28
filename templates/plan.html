@@ -1,4 +1,8 @@
 <!DOCTYPE html>
+
+{% load static %}
+
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -23,11 +27,11 @@
         <div class="col-md-5  header_contact">
           <div class="header_contact_phone">
             <i class="bi bi-telephone-fill "></i>
-            <span>+977 - 0000000000</span>
+            <span>{{infos.phone}}</span>
           </div>
           <div class="header_contact_email">
             <i class="bi bi-envelope-fill "></i>
-            <span>example@email.com</span>
+            <span>{{infos.email}}</span>
           </div>
         </div>
         <div class="col-md-7  header_social">
@@ -76,9 +80,9 @@
                     <li class="nav-item header_links_list">
                       <a class="nav-link text-uppercase header_link" aria-current="page" href="{% url 'blog' %}">blogs</a>
                     </li>
-                    <!-- <li class="nav-item header_links_list">
-                      <a class="nav-link text-uppercase header_link " aria-current="page" href="#">prtfolio</a>
-                    </li> -->
+                    <li class="nav-item header_links_list">
+                      <a class="nav-link text-uppercase header_link " aria-current="page" href="{% url 'portfolio' %}">portfolio</a>
+                    </li>
                     <li class="nav-item header_links_list">
                       <a class="nav-link text-uppercase header_link" aria-current="page" href="{% url 'career' %}">Career</a>
                     </li>
@@ -104,11 +108,12 @@
         <div class="employee_header blog_head pt-5" >
           <p class="text-center plan_top_head">web development</p>
         </div>
+        
         <div class="plan_flex">
         <div class="plan_box"  data-aos="fade-right">
           <div class="plan_box_head">
             <p class="text-capitalized text-center plan_box_type">Basic</p>
-            <img class="plan_box_img" src="image\development.svg" alt="">
+            <img class="plan_box_img" src="{% static 'image\development.svg'%}" alt="">
             
             <div class="plan_box_amount">
               <i class="plan_box_price">Rs. 9999</i>
@@ -150,7 +155,7 @@
               <span>unlimited storage</span>
             </div>
             <div class="plan_box_but">
-              <button class="text-capitalize text-center " onclick="location.href='#'">choose Plan</button>
+              <button class="text-capitalize text-center " onclick="location.href='{% url 'chooseplan'  %}'">choose Plan</button>
             </div>
           </div>
         </div>
@@ -386,7 +391,10 @@
     margin:10,
     nav:true,
     dots: false,
-    autoplay: true,
+    autoplay:true,
+    autoplayTimeout:1000,
+    smartSpeed: 1000,
+    autoplayHoverPause: true,
     responsive:{
         0:{
             items:3

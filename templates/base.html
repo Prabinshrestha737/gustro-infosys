@@ -56,7 +56,7 @@
                 <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
                   <ul class="navbar-nav mb-2 mb-lg-0 header_links">
                     <li class="nav-item header_links_list">
-                      <a class="nav-link  text-uppercase header_link" aria-current="page" href="{% url 'home'%}">Home</a>
+                      <a class="nav-link  text-uppercase header_link" aria-current="page" href="{% url 'home' %}">Home</a>
                     </li>
                     <li class="nav-item header_links_list">
                       <a class="nav-link  text-uppercase header_link" aria-current="page" href="{% url 'aboutus'%}">About Us</a>
@@ -78,9 +78,9 @@
                     <li class="nav-item header_links_list">
                       <a class="nav-link text-uppercase header_link" aria-current="page" href="{% url 'blog'%}">blogs</a>
                     </li>
-                    <!-- <li class="nav-item header_links_list">
-                      <a class="nav-link text-uppercase header_link " aria-current="page" href="#">prtfolio</a>
-                    </li> -->
+                    <li class="nav-item header_links_list">
+                      <a class="nav-link text-uppercase header_link " aria-current="page" href="{% url 'portfolio' %}">portfolio</a>
+                    </li> 
                     <li class="nav-item header_links_list">
                       <a class="nav-link text-uppercase header_link" aria-current="page" href="{% url 'career'%}">Career</a>
                     </li>
@@ -97,7 +97,7 @@
     </section>
   </section>
   
-  <section class="">
+<section class="">
     <div class="container-fluid ">
       <div class="col-md-12 ">
         <div class="row">
@@ -111,263 +111,25 @@
         </div>
       </div>
     </div>
-  </section>
+  </section> 
 </div>
 
+<!-- Changed by backend team-->
 
+<div>
 
+{% block body %}
 
-<section class="aboutus_bg">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <div class="aboutus">
-          <div class="row">
-            <div class="col-lg-3 c col-md-12 order-lg-1 order-sm-3 order-3 ">
-              <div class="what">
-                <div class="what_box" data-aos="fade-up">
-                  <p>web development</p>
-                </div>
-                <div class="what_box" data-aos="fade-up">
-                  <p>software development</p>
-                </div>
-                <div class="what_box" data-aos="fade-up">
-                  <p>digital marketing</p>
-                </div>
-                <div class="what_box" data-aos="fade-up">
-                  <p>graphic design</p>
-                </div>
-                <div class="what_box" data-aos="fade-up">
-                  <p>animation</p>
-                </div>
-                <div class="what_box" data-aos="fade-up">
-                  <p>CCTV installation</p>
-                </div>
-                <div class="what_box" data-aos="fade-up">
-                  <p>PVEX installation</p>
-                </div>
-              </div>
-            </div>
-            <div class=" col-lg-5 col-md-6  order-lg-2 order-sm-2 order-2">
-              <div class="aboutus_info">
-                <p class="text-uppercase heading_1 aboutus_info_head" data-aos="fade-up">About us</p>
-                <p class="aboutus_info_para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate facilis, illo ea laudantium deserunt sunt, iure aspernatur voluptatibus provident magni harum tenetur eaque. Culpa, mollitia nihil dolore ipsa atque reiciendis! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur illum rem fuga magnam quod sed, nam explicabo placeat voluptatem fugiat eos provident tenetur veniam harum tempora alias facilis culpa quasi.</p>
-                <button class="text-uppercase plan" data-aos="fade-up">Our Plan</button>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-6 order-lg-3 order-sm-1 order-1">
-              <div class="aboutus_img" data-aos="fade-up">
-                <img src="{% static 'image\group work.jpg'%}" alt="">
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+{% endblock %}
 
-<section>
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12 py-5">
-        <div class="do">
-          <div class="do_box" style="background-image: url('{% static 'image/web development.png'%}');" onclick="location.href='#'" data-aos="fade-right" >
-            <div class="do_box_info">
-              <p class='text-capitalize' >web development</p>
-            </div>
-            
-          </div>
-          <div class="do_box" style="background-image: url('{% static 'image/software developmant.png'%}');" onclick="location.href='#'" data-aos="fade-right">
-            <div class="do_box_info">
-              <p class='text-capitalize' >software development</p>
-            </div>
-          </div>
-          <div class="do_box" style="background-image: url({% static 'image/web development.png'%});" onclick="location.href='#'" data-aos="fade-right">
-            <div class="do_box_info">
-              <p class='text-capitalize' >Digital marketing</p>
-            </div>
-          </div>
-          <div class="do_box"  style="background-image: url('{% static 'image/graphic design.jpg'%}');" onclick="location.href='#'" data-aos="fade-right">
-            <div class="do_box_info">
-              <p class='text-capitalize' >graphic design</p>
-            </div>
-          </div>
-          <div class="do_box" style="background-image: url({% static 'image/software developmant.png'%});" onclick="location.href='#'" data-aos="fade-right">
-            <div class="do_box_info">
-              <p class='text-capitalize' >animation</p>
-            </div>
-          </div>
-          <div class="do_box" style="background-image: url({% static 'image/web development.png'%});" onclick="location.href='#'" data-aos="fade-right">
-            <div class="do_box_info">
-              <p class='text-capitalize' >CCTV installation</p>
-            </div>
-          </div>
-          <div class="do_box"  style="background-image: url({% static 'image/graphic design.jpg'%});" onclick="location.href='#'" data-aos="fade-right">
-            <div class="do_box_info">
-              <p class='text-capitalize' >PVEX installation</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<section>
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <div class="employee_header blog_head" >
-          <p class=" heading_1">Our Blogs</p>
-          <p class="blog_seeall">see all</p>
-        </div>
-        <div class="blog">
-          {% for post in posts %}
-          <div class="blog_box" onclick="location.href='#'"  >
-            <div class="blog_img" style="background-image: url({{post.image.url}});">
-            </div>
-            <div class="blog_info">
-              <span>{{post.date}}</span>
-              <p>{{post.title}}</p>
-            </div>
-          </div>
-          {% endfor %}
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section>
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12 py-5  ">
-        <div class="employee_header">
-          <p class="text-center heading_1">our team</p>
-        </div>
-        <div class="employee_box">
-          <div class="employee" data-aos="fade-right">
-            <div class="employee_image">
-              <img src="{% static 'image\employees.jpg'%}" alt="">
-            </div>
-            <div class="employee_info">
-              <div class="">
-                <p class="text-capitalize employee_name">nemar Dhungel</p>
-                <p class="employee_postion">CEO</p>
-              </div>
-              <div class="employee_media">
-                <i class="bi bi-facebook" onclick="location.href='#'"></i>
-                <i class="bi bi-instagram"onclick="location.href='#'"></i>
-                <i class="bi bi-twitter"onclick="location.href='#'"></i>
-                <i class="bi bi-google"onclick="location.href='#'"></i>
-              </div>
-              <div class="employee_testimoney">
-                <p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt accusantium impedit ad assumenda atque laboriosam perspiciatis eveniet quaerat earum distinctio eius obcaecati aliquam, alias exercitationem possimus tempora esse facere animi.</p>
-              </div>
-            </div>
-          </div>
-          <div class="employee" data-aos="fade-left">
-            <div class="employee_image">
-              <img src="{% static 'image\employees.jpg'%}" alt="">
-            </div>
-            <div class="employee_info">
-              <div class="">
-                <p class="text-capitalize employee_name">nemar Dhungel</p>
-                <p class="employee_postion">CEO</p>
-              </div>
-              <div class="employee_media">
-                <i class="bi bi-facebook" onclick="location.href='#'"></i>
-                <i class="bi bi-instagram"onclick="location.href='#'"></i>
-                <i class="bi bi-twitter"onclick="location.href='#'"></i>
-                <i class="bi bi-google"onclick="location.href='#'"></i>
-              </div>
-              <div class="employee_testimoney">
-                <p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt accusantium impedit ad assumenda atque laboriosam perspiciatis eveniet quaerat earum distinctio eius obcaecati aliquam, alias exercitationem possimus tempora esse facere animi.</p>
-              </div>
-            </div>
-          </div>
-          <div class="employee" data-aos="fade-right">
-            <div class="employee_image">
-              <img src="{% static 'image\employees.jpg'%}" alt="">
-            </div>
-            <div class="employee_info">
-              <div class="">
-                <p class="text-capitalize employee_name">nemar Dhungel</p>
-                <p class="employee_postion">CEO</p>
-              </div>
-              <div class="employee_media">
-                <i class="bi bi-facebook" onclick="location.href='#'"></i>
-                <i class="bi bi-instagram"onclick="location.href='#'"></i>
-                <i class="bi bi-twitter"onclick="location.href='#'"></i>
-                <i class="bi bi-google"onclick="location.href='#'"></i>
-              </div>
-              <div class="employee_testimoney">
-                <p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt accusantium impedit ad assumenda atque laboriosam perspiciatis eveniet quaerat earum distinctio eius obcaecati aliquam, alias exercitationem possimus tempora esse facere animi.</p>
-              </div>
-            </div>
-          </div>
-          <div class="employee" data-aos="fade-left">
-            <div class="employee_image">
-              <img src="{% static 'image\employees.jpg'%}" alt="">
-            </div>
-            <div class="employee_info">
-              <div class="">
-                <p class="text-capitalize employee_name">nemar Dhungel</p>
-                <p class="employee_postion">CEO</p>
-              </div>
-              <div class="employee_media">
-                <i class="bi bi-facebook" onclick="location.href='#'"></i>
-                <i class="bi bi-instagram"onclick="location.href='#'"></i>
-                <i class="bi bi-twitter"onclick="location.href='#'"></i>
-                <i class="bi bi-google"onclick="location.href='#'"></i>
-              </div>
-              <div class="employee_testimoney">
-                <p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt accusantium impedit ad assumenda atque laboriosam perspiciatis eveniet quaerat earum distinctio eius obcaecati aliquam, alias exercitationem possimus tempora esse facere animi.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- <section>
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <div class="partners_header">
-          <p class="text-center heading_1">our clinets</p>
-        </div>
-        <div class="partners">
-          <img src="image\1.webp" alt="" data-aos="fade-up" >
-          <img src="image\2.webp" alt="" data-aos="fade-up">
-          <img src="image\6.webp" alt="" data-aos="fade-up">
-          <img src="image\3.webp" alt="" data-aos="fade-up">
-          <img src="image\4.webp" alt="" data-aos="fade-up">
-          <img src="image\5.webp" alt="" data-aos="fade-up">
-          <img src="image\7.webp" alt="" data-aos="fade-up">
-          <img src="image\8.webp" alt="" data-aos="fade-up">
-          <img src="image\9.webp" alt="" data-aos="fade-up">
-          <img src="image\10.webp" alt="" data-aos="fade-up">
-          <img src="image\7.webp" alt="" data-aos="fade-up">
-          <img src="image\8.webp" alt="" data-aos="fade-up">
-          <img src="image\9.webp" alt="" data-aos="fade-up">
-          <img src="image\10.webp" alt="" data-aos="fade-up">
-      </div>
-    </div>
-  </div>
-</section> -->
-
+</div>
 
 <section>
   <div class="container">
     <div class="row">
       <div class="col-md-12">
         <div class="partners_header">
-          <p class="text-center heading_1">our clinets</p>
+          <p class="text-center heading_1">our clients</p>
         </div>
         <div class="partners_slide" data-aos="fade-up">
           <div class="owl-carousel owl-theme">
@@ -390,6 +152,7 @@
     </div>
   </div>
 </section>
+
 
 <section class="footer-gray mt-5">
   <div class="container">

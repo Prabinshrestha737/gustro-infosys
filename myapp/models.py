@@ -42,6 +42,13 @@ class Career(models.Model):
     def __str__(self):
         return self.title
 
+    @staticmethod
+    def get_all_careers_by_categoryid(category_id):
+        if category_id:
+            return Career.objects.filter(category = category_id)
+        else:
+            return Career.objects.all()
+
 
 class ServiceCategory(models.Model):
     category = models.CharField(max_length=150)
@@ -57,6 +64,13 @@ class Service(models.Model):
 
     def __str__(self):
         return self.name
+    
+    @staticmethod
+    def get_all_service_by_categoryid(category_id):
+        if category_id:
+            return Service.objects.filter(category = category_id)
+        else:
+            return Service.objects.all()
 
 
 class CompanyInfo(models.Model):
@@ -73,3 +87,27 @@ class CompanyInfo(models.Model):
 
 class AboutUs(models.Model):
     description = models.TextField()
+
+
+class OurPlan(models.Model):
+    plan_type = models.CharField(max_length=50)
+    price = models.CharField(max_length=50)
+    description = models.TextField()
+
+    def __str__(self):
+        return self.plan_type
+    
+
+
+class PlanForm(models.Model):
+    firstname = models.CharField(max_length=50)
+    lastname = models.CharField(max_length=50)
+    email = models.EmailField(max_length=254)
+    phone = models.CharField(max_length=50)
+    development_type = models.CharField(max_length=150)
+    plan_type = models.CharField(max_length=150)
+
+
+    def __str__(self):
+        return self.email
+    

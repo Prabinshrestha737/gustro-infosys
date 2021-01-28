@@ -10,7 +10,7 @@ def index(request):
     data = {}
     data['infos'] = info 
     data['posts'] = our_blogs
-    return render(request, 'index.html', data)
+    return render(request, 'index1.html', data)
 
 
 def blog(request):
@@ -43,13 +43,19 @@ def aboutus(request):
     data = {}
     data['infos'] = info
     data['about'] = about
-    return render(request, 'about us.html', data)
+    return render(request, 'aboutus.html', data)
 
 
 def services(request):
-    service = Service.objects.all()
+    service = None
     categories = ServiceCategory.objects.all()
-    info = CompanyInfo.objects.latest('id')  
+    info = CompanyInfo.objects.latest('id')
+    category_id = request.GET.get('category')
+    print(category_id, "ID")
+    if category_id:
+        service = Service.get_all_service_by_categoryid(category_id)
+    else:
+        service = Service.objects.all()
     data = {}
     data['infos'] = info
     data['services'] = service
@@ -58,11 +64,32 @@ def services(request):
     return render(request, 'services.html', data)
 
 
+def servicedesciption(request):
+    categories = ServiceCategory.objects.all()
+    data  = {}
+    data['category'] = categories
+    return render(request, 'services desc.html', data)
+
+
 def career(request):
-    career = Career.objects.all()[::-1]
+    career = None
     categories = CareerCategory.objects.all()
     categories_count = CareerCategory.objects.all().count()
     info = CompanyInfo.objects.latest('id')
+
+    category_id = request.GET.get('category')
+    print(category_id)
+    if category_id:
+        career = Career.get_all_careers_by_categoryid(category_id)
+    else:
+        career = Career.objects.all()[::-1]
+    # categoryID = request.GET.get('category')
+    # print(categoryID)
+    
+    # if categoryID:
+    #     categories = Career.get_all_category_by_id(categoryID)
+    # else:
+    #     categories = Career.objects.all()
     
     data = {}
 
@@ -99,3 +126,42 @@ def contactus(request):
         contact.save()
 
     return render(request, 'contact us.html', data)
+
+
+def portfolio(request):
+    info = CompanyInfo.objects.latest('id')
+    data = {}
+    data['infos'] = info
+    return render(request, 'portfolio.html', data)
+
+
+def ourplan(request):
+    plan = OurPlan.objects.all()
+    info = CompanyInfo.objects.latest('id')
+    data = {}
+    data['plan'] = plan 
+    data['infos'] = info
+    return render(request, 'plan.html', data)
+
+
+def chooseplan(request):
+    if request.method == "POST":
+        firstname = request.POST.get('firstname')
+        lastname = request.POST.get('lastname')
+        email = request.POST.get('email')
+        phone = request.POST.get('phone')
+        development_type = request.POST.get('developmenttype')
+        plan_type = request.POST.get('plantype')
+        
+        plan = PlanForm(firstname=firstname, lastname=lastname, 
+        email=email, phone=phone, 
+        development_type=development_type, plan_type=plan_type)
+        
+        print(plan)
+
+        plan.save()
+        
+    plan = OurPlan.objects.all()
+    data = {}
+    data['plan'] = plan 
+    return render(request, 'planform.html', data)

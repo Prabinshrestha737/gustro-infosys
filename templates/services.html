@@ -27,11 +27,11 @@
         <div class="col-md-5  header_contact">
           <div class="header_contact_phone">
             <i class="bi bi-telephone-fill "></i>
-            <span>+977 - 0000000000</span>
+            <span>{{infos.phone}}</span>
           </div>
           <div class="header_contact_email">
             <i class="bi bi-envelope-fill "></i>
-            <span>example@email.com</span>
+            <span>{{infos.email}}</span>
           </div>
         </div>
         <div class="col-md-7  header_social">
@@ -41,7 +41,7 @@
           <i class="bi bi-google"onclick="location.href='#'"></i>
           <button  class="text-uppercase button_1" onclick="location.href('#')">CMS login</button>
         </div>
-      </div>
+      </div> 
     </div>
   
   
@@ -81,9 +81,9 @@
                     <li class="nav-item header_links_list">
                       <a class="nav-link text-uppercase header_link" aria-current="page" href="{% url 'blog'%}">blogs</a>
                     </li>
-                    <!-- <li class="nav-item header_links_list">
-                      <a class="nav-link text-uppercase header_link " aria-current="page" href="#">prtfolio</a>
-                    </li> -->
+                    <li class="nav-item header_links_list">
+                      <a class="nav-link text-uppercase header_link " aria-current="page" href="{% url 'portfolio'%}">portfolio</a>
+                    </li>
                     <li class="nav-item header_links_list">
                       <a class="nav-link text-uppercase header_link" aria-current="page" href="{% url 'career'%}">Career</a>
                     </li>
@@ -154,7 +154,7 @@
         <div class="row">
         {% for service in services%}
           <div class="col-sm-6" data-aos="fade-up">
-            <div class="service_box" onClick="location.href=('#')" >
+            <div class="service_box" onClick="location.href=('{% url 'servicedesciption' %}')" >
               <div class="service_img" style="background-image: url('{% static 'image/web development.png'%}');">
                 <i class="bi bi-circle"></i>
               </div>
@@ -167,9 +167,9 @@
       <div class="col-lg-3 col-md-4" data-aos="fade-down">
         <div class="out_cata">
           <p class="text-uppercase">categories</p>
-          {% for categories in category %}
+          {% for category in category %}
           <ul>
-            <li><a href="">{{categories.category}}</a></li>
+            <li><a href="?category={{category.id}}">{{category.category}}</a></li>
           </ul>
           {% endfor %}
         </div>
@@ -202,11 +202,11 @@
                 <div class="footer-list-wrap">
                   <h6 class="ftr-hdr">Phone Number</h6>
                   <ul class="ftr-links-sub">
-                    <li>800-952-5592</li>
+                    <li>{{infos.phone}}</li>
                   </ul>
                   <h6 class="ftr-hdr">Email</h6>
                   <ul class="ftr-links-sub">
-                    <li><a  rel="nofollow">example@gmail.com</a></li>
+                    <li><a  rel="nofollow">{{infos.email}}/a></li>
                   </ul>
                 </div>
                 <!--/.footer-list-wrap-->
@@ -289,7 +289,10 @@
     margin:10,
     nav:true,
     dots: false,
-    autoplay: true,
+    autoplay:true,
+    autoplayTimeout:1000,
+    smartSpeed: 1000,
+    autoplayHoverPause: true,
     responsive:{
         0:{
             items:3
