@@ -133,19 +133,19 @@
         </div>
         <div class="partners_slide" data-aos="fade-up">
           <div class="owl-carousel owl-theme">
-            <img class="item" src="{% static 'image\1'%}.webp" alt="">
-            <img class="item" src="{% static 'image\2'%}.webp" alt="">
-            <img class="item" src="{% static 'image\6'%}.webp" alt="">
-            <img class="item" src="{% static 'image\3'%}.webp" alt="">
-            <img class="item" src="{% static 'image\4'%}.webp" alt="">
-            <img class="item" src="{% static 'image\5'%}.webp" alt="">
-            <img class="item" src="{% static 'image\7'%}.webp" alt="">
-            <img class="item" src="{% static 'image\8'%}.webp" alt="">
-            <img class="item" src="{% static 'image\9'%}.webp" alt="">
+            <img class="item" src="{% static 'image\1.webp'%}" alt="">
+            <img class="item" src="{% static 'image\2.webp'%}" alt="">
+            <img class="item" src="{% static 'image\6.webp'%}" alt="">
+            <img class="item" src="{% static 'image\3.webp'%}" alt="">
+            <img class="item" src="{% static 'image\4.webp'%}" alt="">
+            <img class="item" src="{% static 'image\5.webp'%}" alt="">
+            <img class="item" src="{% static 'image\7.webp'%}" alt="">
+            <img class="item" src="{% static 'image\8.webp'%}" alt="">
+            <img class="item" src="{% static 'image\9.webp'%}" alt="">
             <img class="item" src="{% static 'image\10.webp'%}" alt="">
-            <img class="item" src="{% static 'image\7'%}.webp" alt="">
-            <img class="item" src="{% static 'image\8'%}.webp" alt="">
-            <img class="item" src="{% static 'image\9'%}.webp" alt="">
+            <img class="item" src="{% static 'image\7.webp'%}" alt="">
+            <img class="item" src="{% static 'image\8.webp'%}" alt="">
+            <img class="item" src="{% static 'image\9.webp'%}" alt="">
             <img class="item" src="{% static 'image\10.webp'%}" alt="">
           </div>
       </div>
@@ -165,11 +165,11 @@
                 <div class="footer-list-wrap">
                   <h6 class="ftr-hdr">Phone Number</h6>
                   <ul class="ftr-links-sub">
-                    <li>800-952-5592</li>
+                    <li>{{infos.phone}}</li>
                   </ul>
                   <h6 class="ftr-hdr">Email</h6>
                   <ul class="ftr-links-sub">
-                    <li><a  rel="nofollow">example@gmail.com</a></li>
+                    <li><a  rel="nofollow">{{infos.email}}</a></li>
                   </ul>
                 </div>
                 <!--/.footer-list-wrap-->
@@ -187,10 +187,10 @@
                 <div class="footer-list-wrap">
                   <h6 class="ftr-hdr">About Gusto Infosys</h6>
                   <ul class="ftr-links-sub">
-                    <li><a href="#" rel="nofollow">About us</a></li>
-                    <li><a href="#" rel="nofollow">Careers</a></li>
-                    <li><a href="#" rel="nofollow">our Plan</a></li>
-                    <li><a href="#" rel="nofollow">Blogs </a></li>
+                    <li><a href="{% url 'aboutus'%}" rel="nofollow">About us</a></li>
+                    <li><a href="{% url 'career'%}" rel="nofollow">Careers</a></li>
+                    <li><a href="{% url 'ourplan'%}" rel="nofollow">our Plan</a></li>
+                    <li><a href="{% url 'blog'%}" rel="nofollow">Blogs </a></li>
                   </ul>
                 </div>
               </div>

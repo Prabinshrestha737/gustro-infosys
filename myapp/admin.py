@@ -21,4 +21,8 @@ admin.site.register(OurPlan)
 
 admin.site.register(PlanForm)
 
+admin.site.register(OurTeam)
+
+
+
 

@@ -7,9 +7,11 @@ from myapp.models import *
 def index(request):
     our_blogs = BlogPost.objects.all()[::-1]
     info = CompanyInfo.objects.latest('id')
+    about = AboutUs.objects.all()
     data = {}
     data['infos'] = info 
     data['posts'] = our_blogs
+    data['about'] = about 
     return render(request, 'index1.html', data)
 
 
@@ -64,10 +66,13 @@ def services(request):
     return render(request, 'services.html', data)
 
 
-def servicedesciption(request):
+def servicedesciption(request, id):
     categories = ServiceCategory.objects.all()
+    desc = Service.objects.get(id=id)
+    print(desc)
     data  = {}
     data['category'] = categories
+    data['desc'] = desc
     return render(request, 'services desc.html', data)
 
 
@@ -161,6 +166,8 @@ def chooseplan(request):
 
         plan.save()   
     plan = OurPlan.objects.all()
+    info = CompanyInfo.objects.latest('id')
     data = {}
+    data['info'] = info 
     data['plan'] = plan 
     return render(request, 'planform.html', data)

@@ -154,11 +154,12 @@
         <div class="row">
         {% for service in services%}
           <div class="col-sm-6" data-aos="fade-up">
-            <div class="service_box" onClick="location.href=('{% url 'servicedesciption' %}')" >
+            <div class="service_box" onClick="location.href=('{% url 'servicedesciption' service.id %}')" >
               <div class="service_img" style="background-image: url('{% static 'image/web development.png'%}');">
                 <i class="bi bi-circle"></i>
               </div>
               <p class="service_info">{{service.name}}</p>
+              <h1> {{service.id}} </h1>
             </div>
           </div>
           {% endfor %}

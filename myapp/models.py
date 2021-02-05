@@ -109,4 +109,18 @@ class PlanForm(models.Model):
 
     def __str__(self):
         return self.email
+
+
+class OurTeam(models.Model):
+    name = models.CharField(max_length=150)
+    title = models.CharField(max_length=80)
+    descpition = models.TextField()
+    facebook = models.TextField(blank=True, null=True)
+    twitter = models.TextField(blank=True, null=True)
+    instagram = models.TextField(blank=True, null=True)
+    google = models.TextField(blank=True, null=True)
+
+    def __str__(self):
+        return self.name
+    
     

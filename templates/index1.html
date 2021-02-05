@@ -40,7 +40,9 @@
             <div class=" col-lg-5 col-md-6  order-lg-2 order-sm-2 order-2">
               <div class="aboutus_info">
                 <p class="text-uppercase heading_1 aboutus_info_head" data-aos="fade-up">About us</p>
-                <p class="aboutus_info_para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate facilis, illo ea laudantium deserunt sunt, iure aspernatur voluptatibus provident magni harum tenetur eaque. Culpa, mollitia nihil dolore ipsa atque reiciendis! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur illum rem fuga magnam quod sed, nam explicabo placeat voluptatem fugiat eos provident tenetur veniam harum tempora alias facilis culpa quasi.</p>
+                {% for x in about %}
+                <p class="aboutus_info_para">{{x.description}}</p>
+                {% endfor %}
                 <button class="text-uppercase plan" data-aos="fade-up">Our Plan</button>
               </div>
             </div>
