@@ -1,13 +1,13 @@
 from django.db import models
 import datetime
 
-from ckeditor.fields import RichTextField
+# from ckeditor.fields import RichTextField
 
 # Create your models here.
 
 class BlogPost(models.Model):
     title = models.CharField(max_length=150)
-    description = RichTextField()
+    description = models.CharField(max_length=150)
     image = models.ImageField(upload_to='uploads/images/', blank=True)
     date = models.DateField(default=datetime.date.today, blank=True)
 
